@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <update handle="default_head_blocks"/>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+        <css rel="stylesheet" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" src_type="url" />
+        <css rel="stylesheet" src="https://use.fontawesome.com/releases/v5.4.1/css/all.css" src_type="url" />
+        <css rel="stylesheet" src="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" src_type="url"/>
+        <css rel="stylesheet" src="Magento_Theme::css/styles.css"/>
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" src_type="url" />
+
+        <!-- Popper JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js" src_type="url" />
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" src_type="url" />
+    </head>
+    <body>
+        <referenceBlock name="page.main.title">
+            <action method="setPageTitle">
+                <argument translate="true" name="title" xsi:type="string">Jaybro</argument>
+            </action>
+        </referenceBlock>
+        <referenceContainer name="header.container">
+            <block class="Magento\Framework\View\Element\Template" name="header_section" template="Magento_Theme::html/header.phtml" />
+        </referenceContainer>
+        <referenceContainer name="footer-container">
+            <container name="footer" as="footer" label="Page Footer" htmlTag="div" htmlClass="footer content">
+                <block class="Magento\Framework\View\Element\Template" name="footer_section" template="Magento_Theme::html/footer.phtml" />
+            </container>
+        </referenceContainer>
+        <referenceContainer name="before.body.end">
+            <block class="Magento\Theme\Block\Html\Footer" name="absolute_footer" template="Magento_Theme::html/footer_bottom.phtml" />
+        </referenceContainer>
+    </body>
+</page>

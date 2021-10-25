@@ -1,4 +1,56 @@
 /* Acxelsus Jaybro Styles */
-body {
-    font-size: 16px;
+body{/*font-size: 14px;*/ font-size: 1.4rem; font-family: 'Roboto', sans-serif!important;}
+.social-icons-container span {
+    font-size: 40px;
+    padding: 10px;
 }
+/* Header section */
+header.page-header {
+    background: #0d2c6d;
+    border-bottom: none;
+    padding: 11px 30px 0px;
+    position: relative;
+    color: #fff;
+}
+/* End header section */
+/* Footer section */
+.page-footer, .footer-bottom-container {
+    background-color: #0d2c6d;
+}
+.footer.content {
+    border-top: unset;
+    color: #fff;
+}
+.footer-links h3 {
+    font-weight: bold;
+}
+.footer-links a {
+    color: #fff;
+    font-size: 12px;
+}
+.footer-links ul li {
+    padding: 0px 0px 5px;
+}
+li.jaybro-email, li.jaybro-phone {
+    color: #ffde00!important;
+}
+.footer-bottom-container {
+    border-top: 1px solid #ffde00;
+}
+.footer-bottom {
+    color: #fff;
+    margin: 20px 0px 20px 0px;padding: 0px 120px 0px 120px;
+    font-size: 12px;
+}
+.footer-bottom a.disclaimer, .footer-bottom a.privacy {
+    color: #0066a1;
+}
+.copyright-container {
+    padding-top: 20px;
+}
+span.follow-us {
+    font-size: 12px!important;
+    position:relative;
+    top: -10px;
+}
+/* End footer section */

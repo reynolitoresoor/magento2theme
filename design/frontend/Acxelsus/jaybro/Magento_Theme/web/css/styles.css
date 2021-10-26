@@ -12,9 +12,38 @@ header.page-header {
     position: relative;
     color: #fff;
 }
+.header.content {
+    padding-top: 0px;
+}
+.navigation .level0 > .level-top {
+    color: #fff;
+}
+form.minisearch {
+    position: absolute; 
+    left: -650px;
+    width: 450px;
+}
+form.minisearch .nested {
+    display: none;
+}
+.authorization-link {
+    position: absolute;
+    right: 80px;
+    top: 5px;
+    list-style-type:none;
+}
+.authorization-link a, .minicart-wrapper .action.showcart:before {
+    color: #fff;
+}
+.header-top {
+    padding-right: 60px;
+}
+.minicart-wrapper a.showcart:hover {
+    color: #fff;
+}
 /* End header section */
 /* Footer section */
-.page-footer, .footer-bottom-container {
+.page-footer, .footer-bottom-container, .nav-sections-items, nav.navigation {
     background-color: #0d2c6d;
 }
 .footer.content {

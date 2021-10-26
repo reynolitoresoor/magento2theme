@@ -14,9 +14,15 @@
                 <argument translate="true" name="title" xsi:type="string">Jaybro</argument>
             </action>
         </referenceBlock>
-        <!-- <referenceContainer name="header.container">
-            <block class="Magento\Framework\View\Element\Template" name="header_section" template="Magento_Theme::html/header.phtml" />
-        </referenceContainer> -->
+        <move element="top.search" destination = "header-wrapper" after="logo" />
+        <move element="header.links" destination = "header-wrapper" before="minicart" />
+        <move element="authorization-link" destination = "header-wrapper" before="minicart" />
+        <referenceContainer name="header.container">
+            <block class="Magento\Framework\View\Element\Template" name="header_top" template="Magento_Theme::html/header_top.phtml" before="-" />
+        </referenceContainer>
+        <referenceBlock name="catalog.topnav">
+            <block name="custom.menu.links" template="Magento_Theme::html/topmenu_custom.phtml"/>
+        </referenceBlock>
         <referenceContainer name="footer-container">
             <container name="footer" as="footer" label="Page Footer" htmlTag="div" htmlClass="footer content">
                 <block class="Magento\Framework\View\Element\Template" name="footer_section" template="Magento_Theme::html/footer.phtml" />
@@ -25,5 +31,6 @@
         <referenceContainer name="before.body.end">
             <block class="Magento\Theme\Block\Html\Footer" name="absolute_footer" template="Magento_Theme::html/footer_bottom.phtml" />
         </referenceContainer>
+        <referenceBlock name="header.panel" remove="true"/>
     </body>
 </page>

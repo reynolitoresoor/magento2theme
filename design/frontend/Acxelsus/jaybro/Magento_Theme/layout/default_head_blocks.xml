@@ -1,19 +1,13 @@
 <?xml version="1.0"?>
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <head>
-    <css rel="stylesheet" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" src_type="url" />
+    <css rel="stylesheet" src="Magento_Theme::css/bootstrap.min.css" />
     <css rel="stylesheet" src="https://use.fontawesome.com/releases/v5.4.1/css/all.css" src_type="url" />
     <css rel="stylesheet" src="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" src_type="url"/>
     <css rel="stylesheet" src="Magento_Theme::css/styles.css"/>
-
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" src_type="url" />
-
-    <!-- Popper JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js" src_type="url" />
-
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" src_type="url" />
+    
+    <script src="Magento_Theme::js/jquery.min.js" />
+    <script src="Magento_Theme::js/bootstrap.min.js" />
         <!--<script src="js/jquery.min.js" />-->
     <!--link  src="https://fonts.googleapis.com/css?family=Asap:400,500,600,700" />
     <link src='https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900' rel='stylesheet'  type='text/css' / -->

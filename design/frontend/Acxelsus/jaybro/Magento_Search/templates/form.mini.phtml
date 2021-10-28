@@ -11,7 +11,7 @@
 /** @var $helper \Magento\Search\Helper\Data */
 $helper = $this->helper(\Magento\Search\Helper\Data::class);
 ?>
-<div class="block block-search">
+<div class="block block-search test-search">
     <div class="block block-title"><strong><?= $block->escapeHtml(__('Search')) ?></strong></div>
     <div class="block block-content">
         <form class="form minisearch test-ra" id="search_mini_form" action="<?= $block->escapeUrl($helper->getResultUrl()) ?>" method="get">
@@ -30,7 +30,7 @@ $helper = $this->helper(\Magento\Search\Helper\Data::class);
                            type="text"
                            name="<?= $block->escapeHtmlAttr($helper->getQueryParamName()) ?>"
                            value="<?= $block->escapeHtmlAttr($helper->getEscapedQueryText()) ?>"
-                           placeholder="<?= $block->escapeHtmlAttr(__('Search MonsterShop')) ?>"
+                           placeholder="<?= $block->escapeHtmlAttr(__('Search for products, categories, ...')) ?>"
                            class="input-text"
                            maxlength="<?= $block->escapeHtmlAttr($helper->getMaxQueryLength()) ?>"
                            role="combobox"
@@ -38,6 +38,7 @@ $helper = $this->helper(\Magento\Search\Helper\Data::class);
                            aria-autocomplete="both"
                            autocomplete="off"
                            aria-expanded="false"/>
+                    <span class="btn-search" onclick="document.getElementById('search_mini_form').submit()">SEARCH</span>
                     <div id="search_autocomplete" class="search-autocomplete"></div>
                     <?= $block->getChildHtml() ?>
                 </div>

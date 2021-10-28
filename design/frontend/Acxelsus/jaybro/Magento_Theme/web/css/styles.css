@@ -12,9 +12,7 @@ header.page-header {
     padding: 11px 30px 0px;
     position: relative;
     color: #fff;
-}
-.header.content {
-    padding-top: 0px;
+    margin: 0px;
 }
 .navigation .level0 > .level-top {
     color: #fff;
@@ -29,9 +27,10 @@ form.minisearch .nested {
 }
 .authorization-link {
     position: absolute;
-    right: 80px;
-    top: 5px;
+    right: 90px;
+    top: 30px;
     list-style-type:none;
+    cursor: pointer;
 }
 .authorization-link a, .minicart-wrapper .action.showcart:before {
     color: #fff;
@@ -41,6 +40,43 @@ form.minisearch .nested {
 }
 .minicart-wrapper a.showcart:hover {
     color: #fff;
+}
+.minicart-wrapper .action.showcart:before {
+    position: absolute;
+    top: -30px;
+}
+.minicart-wrapper .action.showcart .text {
+    position: relative;
+    color: #fff;
+}
+.authorization-link span#user-icon {
+    font-size: 30px;
+    position:absolute;
+    top:-30px;
+    left: 10px;
+    cursor: pointer;
+}
+span.btn-search {
+    position: absolute;
+    bottom: 0!important;
+    right: 0;
+    width: 145px;
+    height: 32px;
+    display: block;
+    background: #1ba6df!important;
+    text-align: center;
+    line-height: 35px;
+    color: #fff;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 16px;
+    text-transform: capitalize;
+    left: 450px;
+    top: 0px;
+    cursor: pointer;
+}
+.block-search .action.search {
+    display: none;
 }
 /* End header section */
 /* Footer section */

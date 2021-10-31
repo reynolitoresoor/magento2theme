@@ -82,6 +82,25 @@ span.btn-search {
 .block-search .action.search {
     display: none;
 }
+.nav-sections {
+    margin-bottom: 0px;
+}
+.home-slider-box {
+    background: #e6e5ea;
+    padding: 10px 0px;
+    margin-bottom: 0px;
+}
+.home-slider-box .w_header {
+    font-size: 10px;
+    text-transform: capitalize;
+    font-weight: 600;
+    padding: 3px 0px;
+    margin: 8px 0px;
+    color: #002565;
+    display: inline-block;
+    border-bottom: 2px solid #002565;
+
+}
 /* End header section */
 /* Login modal */
 .header-login {
@@ -213,7 +232,101 @@ span.follow-us {
     position:relative;
     top: -10px;
 }
+.footer-newsletter {
+    background-color: #ffde00;
+    padding-bottom: 40px;
+}
+.footer-newsletter h2 {
+    padding: 0px 0px 10px;
+    margin: 0px;
+    font-size: 24px;
+    color: #0d2c6d;
+    font-weight: 700;
+    line-height: 44px;
+}
 /* End footer section */
+
+/* Home page content */
+div.image-icon {
+    display: inline-block;
+}
+.categories {
+    padding: 30px;
+}
+.image-item-container {
+    padding: 3px;
+}
+a.category-link {
+    position: absolute;
+    height: 60px;
+    background: #0d2c6d;
+    margin-bottom: 0!important;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    display: block;
+    width: 100%;
+    padding: 8px 15px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+    line-height: 44px;
+    font-style: italic;
+    text-align: center;
+}
+h2.why-choose-jaybro {
+    margin: 50px 0px 20px;
+    padding: 6px;
+    font-size: 20px;
+    color: #fff;
+    font-weight: 700;
+    line-height: 34px;
+    background: #0d2c6d;
+    position: relative;
+    max-width: 50%;
+}
+h3.why-choose-jaybro-sub {
+    font-weight: 600;
+    font-size: 16px;
+    margin: 0;
+    padding: 10px 0px 20px;
+    color: #0d2c6d;
+}
+.BtmTwoBxLetf {
+    background: #1ba6df;
+    color: #fff;
+    padding: 0px;
+}
+.BtmTwoBxRight {
+    background: #0d2c6d;
+    color: #fff;
+    padding: 0px;
+}
+.promoHeading {
+    font-size: 44px;
+    line-height: 44px;
+    font-weight: 700;
+}
+p.homePromoText {
+    font-size: 14px;
+    color: #fff;
+    padding-bottom: 15px;
+}
+.homePromoButton a.btn, .jaybroButton.testinomialButton a.btn, .VideoBxBtmRightDec a.btn, .VideoBxTopLeft a.btn {
+    background: #fedd32!important;
+    border: 0;
+    min-width: 195px;
+    height: 46px;
+    padding: 0;
+    line-height: 46px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #0d2c6d!important;
+    border-radius: 0;
+    text-decoration: none;
+}
+/* End home page content */
 
 /* Media query for mobile */
 @media only screen and (min-width: 320px) and (max-width: 480px) {

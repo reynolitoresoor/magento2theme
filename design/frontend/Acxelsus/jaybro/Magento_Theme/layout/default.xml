@@ -24,12 +24,13 @@
             <block name="custom.menu.links" template="Magento_Theme::html/topmenu_custom.phtml"/>
         </referenceBlock>
         <referenceContainer name="footer-container">
+            <block class="Magento\Framework\View\Element\Template" name="footer_newsletter" template="Magento_Theme::html/footer_newsletter.phtml" before="-" />
             <container name="footer" as="footer" label="Page Footer" htmlTag="div" htmlClass="footer content">
                 <block class="Magento\Framework\View\Element\Template" name="footer_section" template="Magento_Theme::html/footer.phtml" />
             </container>
         </referenceContainer>
         <referenceContainer name="before.body.end">
-            <block class="Magento\Theme\Block\Html\Footer" name="absolute_footer" template="Magento_Theme::html/footer_bottom.phtml" />
+            <block class="Magento\Theme\Block\Html\Footer" name="footer_bottom" template="Magento_Theme::html/footer_bottom.phtml" />
             <block class="Magento\Framework\View\Element\Template" name="login_modal" template="Magento_Theme::html/login_popup.phtml" before="-" />
         </referenceContainer>
         <referenceBlock name="header.panel" remove="true"/>

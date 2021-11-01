@@ -1,0 +1,55 @@
+<?php 
+$objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+$category = $objectManager->get('Magento\Framework\Registry')->registry('current_category');
+$catId = $category->getId();
+
+$subCategory = $objectManager->create('Magento\Catalog\Model\Category')->load($catId);
+$subCats = $subCategory->getChildrenCategories();
+$_helper = $this->helper('Magento\Catalog\Helper\Output');
+
+?>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="page-title-wrapper">
+                <h1 class="page-title" id="page-title-heading" aria-labelledby="page-title-heading toolbar-amount">
+                <span class="base" data-ui-id="page-title-wrapper"><?php echo $category->getName(); ?></span>    </h1>
+            </div>
+        </div>
+    </div>
+    <div class="row sub-category-container">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <?php
+            foreach ($subCats as $subcat) {
+                $_category = $objectManager->create('Magento\Catalog\Model\Category')->load($subcat->getId());
+                $subcaturl = $subcat->getUrl();
+
+            ?>
+                <div class="subCategoryheading">
+                    <h4><?php echo $subcat->getName(); ?></h4>
+                </div>
+                <div class="subCategoryProductSlider">
+                    <?php
+                        $categoryFactory = $objectManager->get('\Magento\Catalog\Model\CategoryFactory');
+                        $categoryHelper = $objectManager->get('\Magento\Catalog\Helper\Category');
+                        $categoryRepository = $objectManager->get('\Magento\Catalog\Model\CategoryRepository');
+                        $categoryId = $subcat->getId();
+                        $category = $categoryFactory->create()->load($categoryId);
+                        $categoryProducts = $category->getProductCollection()->addAttributeToSelect('*')->setPageSize(10);
+                    ?>
+
+                    <div class="moon">
+                        <p>Show product category slider</p>
+                        <?php //echo $block->getLayout()->createBlock('Mageplaza\Productslider\Block\CategoryId')->getSliderCategoryIds($category->getId())->setTemplate('productslider.phtml')->toHtml();?>
+                    </div>
+                    <div class="subCategoryViewAll">
+                        <a href="<?php echo $subcat->getUrl(); ?>">View All</a>
+                    </div>
+                </div>
+            <?php } ?>
+            <div class="categoryStaticData">
+                <?php echo $subCategory->getPromotionText(); ?>
+            </div>
+        </div>
+    </div>
+</div>

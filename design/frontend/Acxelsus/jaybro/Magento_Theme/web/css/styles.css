@@ -1,5 +1,5 @@
 /* Acxelsus Jaybro Styles */
-body{/*font-size: 14px;*/ font-size: 1.4rem; font-family: 'Roboto', sans-serif!important;}
+body{/*font-size: 14px;*/ font-size: 1.4rem; font-family: 'Roboto', sans-serif!important;overflow-x: hidden;}
 .social-icons-container span {
     font-size: 40px;
     padding: 10px;
@@ -234,7 +234,7 @@ span.follow-us {
 }
 .footer-newsletter {
     background-color: #ffde00;
-    padding-bottom: 40px;
+    padding: 40px;
 }
 .footer-newsletter h2 {
     padding: 0px 0px 10px;
@@ -244,6 +244,23 @@ span.follow-us {
     font-weight: 700;
     line-height: 44px;
 }
+.subscribe .form-group {
+    display: inline-block;
+    width: 40%;
+}
+.subscribe input {
+    height: 45px;
+}
+button.subscribe {
+    width: 45px;
+    height: 45px;
+    background: url(https://www.jaybro.com.au/pub/media/wysiwyg/slider-Arrow-R.png) center center no-repeat;
+    background-size: auto 100%;
+    border: 0;
+    padding: 0;
+    background-color: unset;
+    border: unset;
+}
 /* End footer section */
 
 /* Home page content */
@@ -251,7 +268,7 @@ div.image-icon {
     display: inline-block;
 }
 .categories {
-    padding: 30px;
+    padding: 20px;
 }
 .image-item-container {
     padding: 3px;
@@ -267,13 +284,53 @@ a.category-link {
     display: block;
     width: 100%;
     padding: 8px 15px;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 600;
     color: #fff;
     text-decoration: none;
     line-height: 44px;
     font-style: italic;
     text-align: center;
+}
+.blog-heading {
+    padding: 12px 0px 12px 7px;
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+    position: relative;
+    width: 100%;
+    background: #0d2c6d;
+}
+.blog-heading:after {
+    position: absolute;
+    content: '';
+    background: #0d2c6d;
+    width: 50px;
+    height: 100%;
+    top: 0;
+    right: -11px;
+    transform: skewX(-25deg);
+    -webkit-transform: skewX(-25deg);
+}
+.btn-blog {
+    background: #fedd32!important;
+    border: 0;
+    min-width: 195px;
+    height: 46px;
+    padding: 0;
+    line-height: 46px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #0d2c6d!important;
+    border-radius: 0;
+    text-decoration: none;
+    margin-right: 17px;
+}
+.btn-blog:hover {
+    color: #fff!important;
+    background: #1ba6df!important;
+    text-decoration: none;
 }
 h2.why-choose-jaybro {
     margin: 50px 0px 20px;
@@ -285,6 +342,17 @@ h2.why-choose-jaybro {
     background: #0d2c6d;
     position: relative;
     max-width: 50%;
+}
+h2.why-choose-jaybro:after {
+    position: absolute;
+    content: '';
+    background: #0d2c6d;
+    width: 50px;
+    height: 100%;
+    top: 0;
+    right: -11px;
+    transform: skewX(-25deg);
+    -webkit-transform: skewX(-25deg);
 }
 h3.why-choose-jaybro-sub {
     font-weight: 600;
@@ -302,6 +370,12 @@ h3.why-choose-jaybro-sub {
     background: #0d2c6d;
     color: #fff;
     padding: 0px;
+}
+.BtmTwoBxLetfContainer, .BtmTwoBxRightContainer {
+    padding: 0px 20px 0px 20px;
+}
+.promo-heading-container {
+    padding: 0px 30px 0px 30px;
 }
 .promoHeading {
     font-size: 44px;
@@ -327,6 +401,140 @@ p.homePromoText {
     text-decoration: none;
 }
 /* End home page content */
+
+/* Category view */
+.breadcrumbs {
+    padding-left: 30px!important;
+    padding-right: 30px!important;
+    margin-left: auto!important;
+    margin-right: auto!important;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    margin-bottom: 0px;
+}
+.breadcrumbs .items>li.item.home a {
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    background: #fff url(https://www.jaybro.com.au/pub/media/wysiwyg/homeIcon.png) right top 3px no-repeat;
+    background-size: 20px 20px;
+    text-indent: -50px;
+    overflow: hidden;
+}
+.breadcrumbs .items>li {
+    display: inline-block;
+    vertical-align: top;
+    color: #0d2c6d;
+    position: relative;
+    color: #0d2c6d;
+    padding: 5px 10px;
+    display: inline-block;
+    text-transform: capitalize;
+    font-weight: 500;
+    font-size: 12px;
+}
+.breadcrumbs .items>li strong {
+    color: #0d2c6d;
+    padding: 0px;
+    display: inline-block;
+    text-transform: capitalize;
+    font-weight: 500;
+    font-size: 12px;
+}
+.breadcrumbs .item:first-child:after {
+    content: ''!important;
+}
+.breadcrumbs .item:not(:last-child):after {
+    content: '|';
+    height: 13px;
+}
+.breadcrumbs .item:not(:first-child) {
+    padding: 15px 0px;
+}
+.page-title-wrapper h1#page-title-heading span.base, body.catalog-category-view.page-layout-1column .categoryStaticData h2 {
+    font-size: 30px;
+    text-transform: capitalize;
+    color: #0d2c6d;
+    font-weight: 800;
+    display: block;
+}
+.subCategoryheading {
+    font-size: 20px;
+    text-transform: capitalize;
+    color: #fff;
+    font-weight: 800;
+    display: inline-block;
+    position: relative;
+    min-width: 50%;
+    padding: 12px 50px 12px 20px;
+    background: #0d2c6d;
+    margin: 0;
+}
+.subCategoryheading:before {
+    position: absolute;
+    content: '';
+    left: -100%;
+    background: #0d2c6d;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+.subCategoryheading:after {
+    position: absolute;
+    content: '';
+    background: #0d2c6d;
+    width: 50px;
+    height: 100%;
+    top: 0;
+    right: -20px;
+    transform: skewX(-25deg);
+    -webkit-transform: skewX(-25deg);
+}
+.subCategoryViewAll {
+    text-align: center;
+    margin: 0;
+    padding: 15px 0px 0px;
+}
+.subCategoryViewAll a {
+    background: #fedd32!important;
+    border: 0;
+    min-width: 195px;
+    height: 46px;
+    padding: 0;
+    line-height: 46px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #0d2c6d!important;
+    border-radius: 0;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+.subCategoryProductSlider {
+    background: #eaf6fc;
+    padding: 25px;
+    position: relative;
+}
+.subCategoryProductSlider:before {
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    background: #eaf6fc;
+    left: -100%;
+    top: 0;
+}
+.subCategoryProductSlider:after {
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    background: #eaf6fc;
+    top: 0;
+    left: inherit;
+    right: -100%;
+}
+/* End category view */
 
 /* Media query for mobile */
 @media only screen and (min-width: 320px) and (max-width: 480px) {

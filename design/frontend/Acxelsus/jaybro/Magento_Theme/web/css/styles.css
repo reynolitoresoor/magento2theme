@@ -535,6 +535,61 @@ p.homePromoText {
     right: -100%;
 }
 /* End category view */
+/* Cart page and checkout page */
+.checkout-index-index header.page-header .header.content, .checkout-cart-index header.page-header .header.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    margin-bottom: 30px;
+}
+.checkout-cart-index a.logo {
+    max-width: 215px;
+}
+.checkout-cart-index .page-title-wrapper {
+    text-align: center;
+    font-weight: bold;
+}
+.checkout-cart-index .action.primary {
+    background-image: none;
+    background: #1979c3;
+    border: 1px solid #1979c3;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-weight: 600;
+    padding: 7px 15px;
+    font-size: 1.4rem;
+    box-sizing: border-box;
+    vertical-align: middle;
+}
+.action.primary:hover, .amquote-addto-button:hover {
+    background: #ffde00;
+    color: #0d2c6d;
+}
+.checkout-cart-index .cart.table-wrapper .actions-toolbar {
+    text-align: right;
+}
+.checkout-cart-index .cart.table-wrapper .actions-toolbar > .action, .action-gift {
+    background-color: unset;
+    border: 0px;
+}
+.checkout-cart-index .cart.table-wrapper .actions-toolbar > .action, .action-gift:hover {
+    box-shadow: unset;
+}
+a.logo {
+    margin: 25px;
+}
+a.logo img {
+    max-width: 85%;
+    height: auto;
+    padding-bottom: 5%;
+}
+.table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {
+    border: 0px;
+}
+/* End cart page and checkout page */
 
 /* Media query for mobile */
 @media only screen and (min-width: 320px) and (max-width: 480px) {

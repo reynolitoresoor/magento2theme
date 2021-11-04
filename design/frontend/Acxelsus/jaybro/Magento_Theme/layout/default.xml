@@ -31,7 +31,9 @@
         </referenceContainer>
         <referenceContainer name="before.body.end">
             <block class="Magento\Theme\Block\Html\Footer" name="footer_bottom" template="Magento_Theme::html/footer_bottom.phtml" />
-            <block class="Magento\Framework\View\Element\Template" name="login_modal" template="Magento_Theme::html/login_popup.phtml" before="-" />
+            <block class="Magento\Customer\Block\Form\Login" name="login_modal" template="Magento_Theme::html/login_modal.phtml" before="-" />
+            <block class="Magento\Customer\Block\Form\Register" name="register_modal" template="Magento_Theme::html/register_modal.phtml" before="-" />
+            <block class="Magento\Customer\Block\Account\Forgotpassword" name="forgot_password_modal" template="Magento_Theme::html/forgot_password_modal.phtml" before="-" />
         </referenceContainer>
         <referenceBlock name="header.panel" remove="true"/>
     </body>

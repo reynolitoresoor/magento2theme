@@ -1,4 +1,4 @@
-<!-- Modal -->
+<!-- Signin Modal -->
 <div class="modal fade" id="login-modal" role="dialog">
     <div class="modal-dialog">
     
@@ -12,7 +12,10 @@
           </div>
         </div>
         <div class="modal-body">
-          <form action="/action_page.php">
+          <form action="<?= $block->escapeUrl($block->getPostActionUrl()) ?>"
+              method="post"
+              id="login-form"
+              data-mage-init='{"validation":{}}'>
             <div class="form-group">
               <input name="username" value="" autocomplete="off" id="email" type="email" class="input-text" title="Email" data-validate="{required:true, 'validate-email':true}" placeholder="Email" required="" aria-required="true">
             </div>
@@ -21,7 +24,7 @@
             </div>
             <div class="row actions-toolbar">
                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                  <p class="forgot-password">Forgot Your Password? </p>
+                  <a class="forgot-password" data-dismiss="modal" data-toggle="modal" data-target="#forgot-password-modal">Forgot Your Password? </a>
                </div>
                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                   <button class="btn-signin">Sign In</button>
@@ -38,7 +41,7 @@
               <li><span class="fa fa-check"></span> 4 hour metro delivery</li>
             </ul>
           </div>
-          <button type="button" class="btn btn-default btn-register" data-dismiss="modal">Register Now</button>
+          <button type="button" class="btn btn-default btn-register" data-dismiss="modal" data-toggle="modal" data-target="#create-account-modal">Register Now</button>
         </div>
       </div>
       

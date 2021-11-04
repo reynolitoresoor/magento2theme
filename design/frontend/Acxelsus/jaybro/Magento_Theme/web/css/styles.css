@@ -102,20 +102,20 @@ span.btn-search {
 
 }
 /* End header section */
-/* Login modal */
-.header-login {
+/* Modals */
+.modal-header {
     color: #0d2c6d;
 }
-#login-modal .modal-header, #login-modal .modal-footer {
+.modal .modal-header, .modal .modal-footer {
     padding: 40px!important;
 }
-#login-modal .modal-body {
+.modal .modal-body {
     padding: 0px 40px 40px 40px;
 }
-#login-modal .modal-footer {
+.modal .modal-footer {
     background-color: #d9dada;
 }
-#login-modal .modal-content {
+.modal .modal-content {
     background-color: #ebecec;
 }
 .modal-footer-description {
@@ -178,7 +178,7 @@ button.close {
 button.close:hover {
     opacity: 1;
 }
-#login-modal input#email, #login-modal input#password {
+.modal input {
     height: 44px;
     border: 1px solid #0d2c6d;
     outline: none;
@@ -191,7 +191,46 @@ button.close:hover {
 #login-modal {
     background: rgba(3,42,102,.8)!important;
 }
-/* End login modal */
+.actions-toolbar button {
+    height: 50px;
+    min-width: inherit;
+    border: 0;
+    border-radius: 0;
+    background: #0d2c6d;
+    width: 100%;
+    margin-right: 0;
+    color: #fff;
+    font-weight: 600;
+}
+.btn-forgot-password:hover, .btn-sms-support-team:hover {
+    background: #fedd32!important;
+}
+.btn-forgot-password {
+    width: 60%!important;
+}
+.forgot-password-divider {
+    position: relative;
+    top: 10px;
+    line-height: 20px;
+    left: 0;
+    padding: 0 15px;
+    font-weight: 600;
+    text-align: center;
+    width: 100%;
+    font-size: 16px;
+    color: #0d2c6d;
+}
+.btn-sms-support-team {
+    background-color: #1ba6df;
+    font-weight: 600;
+    color: #fff;
+    border: 0px;
+    height: 50px;
+}
+.image-icon-container, .sms-container {
+    padding: 30px;
+}
+/* End modals modal */
 /* Footer section */
 .page-footer, .footer-bottom-container, .nav-sections-items, nav.navigation {
     background-color: #0d2c6d;
@@ -546,8 +585,10 @@ p.homePromoText {
 .checkout-cart-index a.logo {
     max-width: 215px;
 }
-.checkout-cart-index .page-title-wrapper {
+.checkout-cart-index .page-title-wrapper{
     text-align: center;
+}
+.checkout-cart-index .page-title-wrapper .page-title {
     font-weight: bold;
 }
 .checkout-cart-index .action.primary {
@@ -588,6 +629,9 @@ a.logo img {
 }
 .table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {
     border: 0px;
+}
+.abs-margin-for-forms-desktop, .fieldset .legend, .column:not(.sidebar-main) form .actions-toolbar, .column:not(.sidebar-additional) form .actions-toolbar, .login-container .fieldset:after {
+    margin-left: 0px;
 }
 /* End cart page and checkout page */
 

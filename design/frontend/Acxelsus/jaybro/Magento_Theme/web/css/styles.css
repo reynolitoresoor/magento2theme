@@ -2079,6 +2079,8 @@ ul.navigation-aboutus li a {
 /* Our range submenu */
 .navigation ul li.our-range .submenu {
     width: 400px;
+    height: 75%;
+    min-height: 592px;
 }
 .navigation ul li.our-range:hover .submenu {
     display: block;

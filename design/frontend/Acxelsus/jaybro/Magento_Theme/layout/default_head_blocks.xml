@@ -11,6 +11,7 @@
     <script src="Magento_Theme::js/bootstrap.min.js" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" src_type="url" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/elevatezoom/2.2.3/jquery.elevatezoom.min.js" src_type="url" />
+    <script src="Magento_Theme::js/scripts.js" />
     <!--<script src="js/jquery.min.js" />-->
     <!--link  src="https://fonts.googleapis.com/css?family=Asap:400,500,600,700" />
     <link src='https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900' rel='stylesheet'  type='text/css' / -->

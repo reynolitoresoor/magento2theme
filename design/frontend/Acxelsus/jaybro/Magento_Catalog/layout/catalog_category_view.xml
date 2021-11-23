@@ -20,5 +20,6 @@
         </referenceBlock>
         <referenceBlock name="sidebar.additional" remove="true"/>
         <referenceBlock name="category.products" remove="true" />
+        <referenceBlock name="breadcrumbs" remove="false"/>
     </body>
 </page>

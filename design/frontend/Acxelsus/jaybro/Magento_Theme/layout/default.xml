@@ -23,6 +23,9 @@
         <referenceBlock name="catalog.topnav">
             <block name="custom.menu.links" template="Magento_Theme::html/topmenu_custom.phtml"/>
         </referenceBlock>
+        <referenceContainer name="page.top">
+            <block name="custom.about.submenu" template="Magento_Theme::html/about_submenu.phtml" after="nav-sections"/>
+        </referenceContainer>
         <referenceContainer name="footer-container">
             <block class="Magento\Framework\View\Element\Template" name="footer_newsletter" template="Magento_Theme::html/footer_newsletter.phtml" before="-" />
             <container name="footer" as="footer" label="Page Footer" htmlTag="div" htmlClass="footer content">
@@ -36,5 +39,6 @@
             <block class="Magento\Customer\Block\Account\Forgotpassword" name="forgot_password_modal" template="Magento_Theme::html/forgot_password_modal.phtml" before="-" />
         </referenceContainer>
         <referenceBlock name="header.panel" remove="true"/>
+        <referenceBlock name="breadcrumbs" remove="true"/>
     </body>
 </page>

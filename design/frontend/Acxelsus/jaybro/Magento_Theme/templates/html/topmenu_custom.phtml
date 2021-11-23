@@ -1,27 +1,45 @@
 <?php
 /** @var \Magento\Framework\View\Element\Template $block */
+$objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+$catId = 2;  //Parent Category ID
+$subCategory = $objectManager->create('Magento\Catalog\Model\Category')->load($catId);
+$categories = $subCategory->getChildrenCategories();
+
 ?>
-<li class="level0 level-top ui-menu-item">
-    <a href="<?php echo $this->getBaseUrl(); ?>" class="level-top ui-corner-all"  role="menuitem">
+<li class="level0 level-top ui-menu-item our-range">
+    <a class="level-top ui-corner-all"  role="menuitem">
         <span><?= __("Our Range")?></span>
     </a>
+    <ul class="level0 submenu ui-menu ui-widget ui-widget-content ui-corner-all">
+        <li class="ui-menu-item categories"><a>Categories</a></li>
+        <li class="ui-menu-item"><a href="#">Home Entertainment</a></li>
+        <li class="ui-menu-item"><a href="#">Routers</a></li>
+        <li class="ui-menu-item">
+        <?php 
+            foreach ($categories as $category) {
+                $object_manager = $objectManager->create('Magento\Catalog\Model\Category')->load($category->getId());
+                echo '<a class="category" href="'.$object_manager->getUrl().'"> '.$category->getName().'</a>';
+            }
+        ?>
+        </li>
+    </ul>
 </li>
-<li class="level0 level-top ui-menu-item">
-    <a href="<?php echo $this->getUrl('about'); ?>" class="level-top ui-corner-all"  role="menuitem">
+<li class="level0 level-top ui-menu-item about-jaybro">
+    <a class="level-top ui-corner-all"  role="menuitem">
         <span><?= __("About Jaybro")?></span>
     </a>
 </li>
-<li class="level0 level-top ui-menu-item">
+<li class="level0 level-top ui-menu-item careers">
     <a href="<?php echo $this->getUrl('careers'); ?>" class="level-top ui-corner-all"  role="menuitem">
         <span><?= __("Careers")?></span>
     </a>
 </li>
-<li class="level0 level-top ui-menu-item">
+<li class="level0 level-top ui-menu-item contact-us">
     <a href="<?php echo $this->getUrl('contact-us'); ?>" class="level-top ui-corner-all"  role="menuitem">
         <span><?= __("Contact Us")?></span>
     </a>
 </li>
-<li class="level0 level-top ui-menu-item">
+<li class="level0 level-top ui-menu-item my-quote">
     <a href="<?php echo $this->getUrl('my-quote'); ?>" class="level-top ui-corner-all"  role="menuitem">
         <span><?= __("My Quote")?></span>
     </a>

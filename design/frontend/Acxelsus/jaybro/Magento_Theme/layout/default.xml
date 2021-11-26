@@ -19,13 +19,13 @@
         <move element="authorization-link" destination = "header-wrapper" before="minicart" />
         <referenceContainer name="header.container">
             <block class="Magento\Framework\View\Element\Template" name="header_top" template="Magento_Theme::html/header_top.phtml" before="-" />
+            <block name="website.switcher" template="Magento_Theme::html/website_switcher.phtml" after="minicart"/>
         </referenceContainer>
         <referenceBlock name="catalog.topnav">
             <block name="custom.menu.links" template="Magento_Theme::html/topmenu_custom.phtml"/>
         </referenceBlock>
         <referenceContainer name="page.top">
-            <block name="custom.about.submenu" template="Magento_Theme::html/about_submenu.phtml" after="nav-sections"/>
-        </referenceContainer>
+            <block name="custom.about.submenu" template="Magento_Theme::html/about_submenu.phtml" after="nav-sections"/>        </referenceContainer>
         <referenceContainer name="footer-container">
             <block class="Magento\Framework\View\Element\Template" name="footer_newsletter" template="Magento_Theme::html/footer_newsletter.phtml" before="-" />
             <container name="footer" as="footer" label="Page Footer" htmlTag="div" htmlClass="footer content">

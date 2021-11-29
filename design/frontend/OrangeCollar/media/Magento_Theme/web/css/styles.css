@@ -1,0 +1,60 @@
+/* Orange Collar Media custom css */
+.body {
+    font-family: Open Sans,"sans-serif";
+}
+.page-main {
+    max-width: unset;
+    padding: 0px;
+}
+p {
+    width: 100%;
+}
+/* Navigation */
+.navbar {
+    padding: 5px;
+    background-color: #473528;
+    border-bottom: 2px solid #f57b20;
+    border-radius: 0px;
+    margin-bottom: 0px;
+}
+.navbar img.logo {
+    width: 300px;
+    height: 60px;
+    margin-bottom: 0px;
+}
+ul.navbar-nav li a {
+    font-size: 1.2em;
+    color: #fff;
+}
+ul.navbar-nav li a:hover {
+    color: #548f4e;
+    background-color: unset;
+}
+/* End navigation */
+/* Header slider */
+.main-container {
+    z-index: -100;
+    background-image: url(https://cdn.sanity.io/images/v32r25bv/production/eb19344f4f369c81f9d80a27ccf3e560d6585b07-1279x621.jpg?w=800&h=388&fit=crop&fm=webp);
+    opacity: 1;
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 750px;
+    top: 0;
+    left: 0;
+    transition: opacity 0.5s ease 500ms;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.main-container .container {
+    height: 750px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+}
+.main-container .container h1, .main-container .container p {
+    color: #fff;
+}
+/* End header slider */

@@ -1,0 +1,22 @@
+{
+    "name": "orangecollar/media",
+    "description": "",
+    "type": "magento2-module",
+    "license": "proprietary",
+    "authors": [
+        {
+            "email": "ryan.bansi@levaro.net",
+            "name": "Orange Collar Media"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Acxelsus\\Jaybro\\": ""
+        }
+    }
+}

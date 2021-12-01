@@ -1,0 +1,30 @@
+<?php 
+/** @var \Magento\Framework\View\Element\Template $block */
+$objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+$catId = 2;  //Parent Category ID
+$subCategory = $objectManager->create('Magento\Catalog\Model\Category')->load($catId);
+$categories = $subCategory->getChildrenCategories();
+?>
+<nav class="navbar">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Logo%21_Logo.svg/800px-Logo%21_Logo.svg.png" class="img-responsive logo" /></a>
+    </div>
+    <ul class="nav navbar-nav pull-right">
+      <li><a href="<?php $block->getBaseUrl(); ?>/magento-support" class="dropdown-toggle" data-toggle="dropdown">Magento Support <span class="fa fa-angle-down"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="<?php $block->getBaseUrl(); ?>/magento-2-migration">Magento 2 Migration</a></li>
+            <li><a href="<?php $block->getBaseUrl(); ?>/the-benefits-of-migrating-magento-1-to-magento-2">Magento 2</a></li>
+          </ul>
+      </li>
+      <li><a href="<?php $block->getBaseUrl(); ?>/shopify-support" class="dropdown-toggle" data-toggle="dropdown">Shopify Support <span class="fa fa-angle-down"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="<?php $block->getBaseUrl(); ?>/shopify-plus">Shopify Plus</a></li>
+          </ul>
+      </li>
+      <li><a href="#">Website Design</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">About</a></li>
+    </ul>
+  </div>
+</nav>

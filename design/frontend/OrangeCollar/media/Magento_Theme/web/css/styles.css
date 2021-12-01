@@ -11,7 +11,6 @@ p {
 }
 /* Navigation */
 .navbar {
-    padding: 5px;
     background-color: #473528;
     border-bottom: 2px solid #f57b20;
     border-radius: 0px;
@@ -22,6 +21,10 @@ p {
     height: 60px;
     margin-bottom: 0px;
 }
+ul.navbar-nav li {
+    padding: 10px;
+    margin-bottom: 0px;
+}
 ul.navbar-nav li a {
     font-size: 1.2em;
     color: #fff;
@@ -29,6 +32,26 @@ ul.navbar-nav li a {
 ul.navbar-nav li a:hover {
     color: #548f4e;
     background-color: unset;
+}
+ul.navbar-nav .dropdown-menu {
+    background: hsla(0,0%,100%,.6);
+    cursor: pointer;
+    transform: translateY(-10px);
+    transition: all .4s ease;
+    top: 80px;
+    padding: 0px;
+}
+.navbar ul.navbar-nav li:hover .dropdown-menu {
+    display: block;
+}
+.navbar ul.navbar-nav .dropdown-menu li a {
+    color: #303030;
+}
+.navbar ul.navbar-nav .dropdown-menu li:hover a {
+    color: #548f4e;
+}
+.navbar ul.navbar-nav .dropdown-menu li:hover {
+  background-color: #fff;
 }
 /* End navigation */
 /* Header slider */
@@ -209,6 +232,7 @@ ul.ul-list li span {
 .-mb-20 {
     margin-bottom: -5rem;
 }
+/* Our clients */
 .our-clients-icon-container {
     padding-left: 180px;
     padding-right: auto;
@@ -220,3 +244,80 @@ ul.ul-list li span {
 .text-green {
     color: #70a84e;
 }
+/* End our clients */
+/* Contact form */
+div.contact-form {
+    border-top: 2px solid#f57b20;
+}
+form.contact-form input {
+    padding:6px 16px;
+    min-height:47px;
+    border-radius: 5px;
+}
+form.contact-form button {
+    border-radius: 5px;
+}
+/* End contact form */
+/* Footer */
+.parallax {
+    /* The image used */
+    background-image: url("https://cdn.sanity.io/images/v32r25bv/production/396e36fb1bf0b76efe826681b673ae0744a822fd-1279x621.jpg?w=800&h=388&fit=crop");
+  
+    /* Set a specific height */
+    min-height: 500px; 
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.footer ul {
+    list-style-type: none;
+    padding-left: 0px;
+}
+.footer ul li a, .footer ul li{
+    color: #fff;
+    text-decoration: none;
+}
+.copyright-container p {
+    font-size: 1.6rem;
+}
+.bg-opacity-25 {
+    --bg-opacity: 0.25;
+}
+.bg-white {
+    --bg-opacity: 1;
+    background-color: #fff;
+    background-color: rgba(255,255,255,var(--bg-opacity));
+}
+.social-icons a {
+    color: #fff;
+    background-color: transparent;
+    text-decoration: none;
+    margin: 5px;
+}
+.columns .column.main {
+    padding-bottom: 0px;
+}
+/* End footer */
+/* Magento 2 migration */
+.magento-2-migration-header {
+    z-index: -100;
+    background-image: url(https://cdn.sanity.io/images/v32r25bv/production/ca12c9e544d5000081a6e4ae0d2fa24c1a1e64d4-1279x621.png?w=800&h=388&fit=crop&fm=webp);
+    opacity: 1;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 750px;
+    top: 0;
+    left: 0;
+    transition: opacity 0.5s ease 500ms;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.magento-2-migration-header .pagebuilder-column-group {
+    margin-top: 200px;
+}
+/* End magento 2 migration */

@@ -15,9 +15,13 @@
             </action>
         </referenceBlock>
         <referenceContainer name="page.wrapper">
-            <block  class="Magento\Framework\View\Element\Template" name="top.header" template="Magento_Theme::custom_header.phtml" before="header.container"/>
+            <block  class="Magento\Framework\View\Element\Template" name="top.header" template="Magento_Theme::html/custom_header.phtml" before="header.container"/>
         </referenceContainer>    
+        <referenceContainer name="footer-container">
+            <block class="Magento\Theme\Block\Html\Footer" name="footer" template="Magento_Theme::html/custom_footer.phtml"/>
+        </referenceContainer>
         <referenceBlock name="header.container" remove="true" /> 
         <referenceBlock name="navigation.sections" remove="true"/>  
+        <referenceBlock name="breadcrumbs" remove="true"/>  
     </body>
 </page>

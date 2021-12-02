@@ -27,11 +27,11 @@
        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
             <ul>
                 <li><h3>My Account</h3></li>
-                <li><a href="https://www.jaybro.com.au/customer/account/"> My Account </a></li>
-                <li><a href="https://www.jaybro.com.au/amasty_quote/account/index/"> My Quote </a></li>
-                <li><a class="jaybro_forgetpasswordTrigger" href="https://www.jaybro.com.au/#/"> Forgotten Password </a></li>
-                <li><a href="https://www.jaybro.com.au/about/price-beat/"> Request a Price Beat</a></li>
-                <li><a href="https://www.jaybro.com.au/weekly-special/clearance.html/"> Stock Clearance </a></li>
+                <li><a data-label="login-popup" data-toggle="modal" data-target="#login-modal" style="cursor: pointer;"> My Account </a></li>
+                <li><a href="<?php $block->getBaseUrl(); ?>/amasty_quote/account/index/"> My Quote </a></li>
+                <li><a class="jaybro_forgetpasswordTrigger" data-dismiss="modal" data-toggle="modal" data-target="#forgot-password-modal" style="cursor: pointer"> Forgotten Password </a></li>
+                <li><a href="<?php $block->getBaseUrl(); ?>/about/price-beat/"> Request a Price Beat</a></li>
+                <li><a href="<?php $block->getBaseUrl(); ?>/weekly-special/clearance.html/"> Stock Clearance </a></li>
             </ul>
        </div>
        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">

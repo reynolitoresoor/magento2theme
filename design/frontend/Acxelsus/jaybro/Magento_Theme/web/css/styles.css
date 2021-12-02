@@ -2248,7 +2248,7 @@ ul.jaybroAboutUsSideNavigation li a {
     font-weight: 600;
 }
 /* End price beat page */
-/* 30 day trade account */
+/* 30 day trade account page */
 a.button {
     background-color: #ffff;
     color: #1BA6DF!important;
@@ -2269,8 +2269,8 @@ a.button:hover {
     padding-left: 0px;
     padding-right: auto;
 }
-/* End 30 day trade account */
-/* Jaybro Policies */
+/* End 30 day trade account page */
+/* Jaybro Policies page */
 .greyfont {
     color: #333333;
     padding-top: 20px;
@@ -2278,8 +2278,8 @@ a.button:hover {
     padding-bottom: 20px;
     padding-left: 40px;
 }
-/* End jaybro policies */
-/* Temporary fencing sydney */
+/* End jaybro policies page */
+/* Temporary fencing sydney page */
 a.btn-yellow {
     background-color: #FFDD00;
     color: #0d2c6d;
@@ -2309,7 +2309,14 @@ a.btn-yellow:hover {
     border-color: #e3e3e3;
     border-radius: 5px;
 }
-/* End temporary fencing sydney */
+/* End temporary fencing sydney page */
+/* Book now page */
+.book-now-slider {
+    background-image:url(https://www.jaybro.com.au/pub/media/banners/Fit-Test-Banner.jpg);
+    background-repeat:no-repeat;
+    padding:150px 0 0 0
+}
+/* End book now page */
 /* Media query for mobile */
 @media only screen and (min-width: 320px) and (max-width: 480px) {
 

@@ -301,7 +301,7 @@ form.contact-form button {
     padding-bottom: 0px;
 }
 /* End footer */
-/* Magento 2 migration */
+/* Magento 2 migration page */
 .magento-2-migration-header {
     z-index: -100;
     background-image: url(https://cdn.sanity.io/images/v32r25bv/production/ca12c9e544d5000081a6e4ae0d2fa24c1a1e64d4-1279x621.png?w=800&h=388&fit=crop&fm=webp);
@@ -320,4 +320,24 @@ form.contact-form button {
 .magento-2-migration-header .pagebuilder-column-group {
     margin-top: 200px;
 }
-/* End magento 2 migration */
+/* End magento 2 migration page*/
+/* The benefits of migrating magento 1 to magento 2 page*/
+.the-benefits-of-migrating-magento-1-to-magento-2-header {
+    z-index: -100;
+    background-image: url(https://cdn.sanity.io/images/v32r25bv/production/7057542d97f149327c1a9e7fd0e1bd4dfe7ac72b-1279x621.png?w=800&h=388&fit=crop&fm=webp);
+    opacity: 1;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 750px;
+    top: 0;
+    left: 0;
+    transition: opacity 0.5s ease 500ms;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.the-benefits-of-migrating-magento-1-to-magento-2 .pagebuilder-column-group {
+    margin-top: 200px;
+}
+/* End the benefits of migrating magento 1 to magento 2 page */

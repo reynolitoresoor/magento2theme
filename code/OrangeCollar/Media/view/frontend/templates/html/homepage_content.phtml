@@ -66,69 +66,23 @@
         </div>
     </div>
 </div>
-<div class="bg-orange">
-    <div class="bg-orange-background-image" style="background-position:left;background-repeat:no-repeat;background-size:cover;position:relative;opacity:0.99;z-index: 1;">
-    <div class="container">
-        <div class="row lg:py-28">
-                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-                    <h2 class="mb-6 text-2xl font-hairline text-white">WEBSITES THAT DRIVE RESULTS</h2>
-                    <div class="w-110px border mx-auto md:mx-0 border-2 border-white mb-6"></div>
-                    <p class="text-white">Websites should drive leads, sales, and deeper engagement. Websites are more than pretty brochures.</p>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 website-design-container">
-                    <a href="/website-design"><button class="bg-brown text-white text-sm md:text-base font-bold rounded-md px-4 md:px-8 md:text-base w-full transition duration-300 ease-in-out  transform hover:scale-110 hover:bg-lightgreen leading-none  " style="padding-top:15px;padding-bottom:15px;width: 50%;font-weight: bold;">WEBSITE DESIGN</button></a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="container our-clients">
-    <div class="row my-20 lg:my-40">
-        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
-            <h2 class="mb-6 text-2xl">OUR CLIENTS</h2>
-            <hr class="w-110px border border-2 border-green mb-6" />
-            <p>Driving Sales for Leading Brands</p>
-        </div>
-        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
-            <div class="flex -mb-20 flex-col md:flex-row our-clients-icon-container">
-                <div class="our-clients-icon">
-                    <img src="https://cdn.sanity.io/images/v32r25bv/production/3040afd4fbd6c7ec6a90d2e21ec394a1bcb56431-300x300.png?w=160&amp;h=160&amp;fit=crop" style="margin:0;margin-left:10px" alt="brand logo">
-                </div>
-                <div class="our-clients-icon">
-                    <img src="https://cdn.sanity.io/images/v32r25bv/production/e4bfba31b18dfcab0d7901c4f2f23e126cabbd3b-300x300.png?w=160&amp;h=160&amp;fit=crop" style="margin:0" alt="brand logo">
-                </div>
-                <div class="our-clients-icon">
-                    <img src="https://cdn.sanity.io/images/v32r25bv/production/4e2e97e866b7b3fac0ca42f74fb9a465a33bc2fa-300x300.png?w=160&amp;h=160&amp;fit=crop" style="margin:0" alt="brand logo">
-                </div>
-                <div class="our-clients-icon">
-                    <img src="https://cdn.sanity.io/images/v32r25bv/production/1d83ddff1d78b86bb77b20a5dc4aebd3761919e4-300x300.png?w=160&amp;h=160&amp;fit=crop" style="margin:0" alt="brand logo">
-                </div>
-                <div class="our-clients-icon">
-                    <img src="https://cdn.sanity.io/images/v32r25bv/production/5a40561178a8b0886b4bf618b6c0b12ecdecffc7-300x300.png?w=160&amp;h=160&amp;fit=crop" style="margin:0;margin-top:10px;margin-left:10px" alt="brand logo">
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="happy-customers" style="background-color:#f2f2f2">
-    <div class="container">
-        <div class="row my-20 lg:my-40">
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
-                <h2 class="mb-6 text-2xl">HAPPY CUSTOMERS TELL GREAT STORIES</h2>
-                <hr class="w-110px border border-2 border-green mb-6" />
-            </div>
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 text-center">
-                <h2 class="text-4xl text-green font-medium">11</h2>
-                <p class="font-hairline" style="font-size:19px;line-height:2.5">Years In Business</p>
-            </div>
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 text-center">
-                <h2 class="text-4xl text-green">700+</h2>
-                <p class="font-hairline" style="font-size:19px;line-height:2.5">Clients Served</p>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="contact-form" style="background-color:#473528;">
+<?php echo $block -> getLayout( )
+                  -> createBlock('Magento\Cms\Block\Block')
+                  -> setBlockId('websites-that-drive-results') // CMS block Identifier
+          ->toHtml(); ?>
+<?php echo $block -> getLayout( )
+                  -> createBlock('Magento\Cms\Block\Block')
+                  -> setBlockId('our-clients') // CMS block Identifier
+          ->toHtml(); ?>
+<?php echo $block -> getLayout( )
+                  -> createBlock('Magento\Cms\Block\Block')
+                  -> setBlockId('happy-customers-tell-great-stories') // CMS block Identifier
+          ->toHtml(); ?>
+<?php echo $block -> getLayout( )
+                  -> createBlock('Magento\Cms\Block\Block')
+                  -> setBlockId('contact-form') // CMS block Identifier
+          ->toHtml(); ?>
+<!-- <div class="contact-form" style="background-color:#473528;">
     <div class="container">
         <div class="row my-20 lg:my-40">
             <form name="contact_form" class="contact-form" method="post" action="/thank-you">
@@ -157,4 +111,4 @@
             </form>
         </div>
     </div>
-</div>
+</div> -->

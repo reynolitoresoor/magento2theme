@@ -8,7 +8,7 @@ $categories = $subCategory->getChildrenCategories();
 <nav class="navbar">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Logo%21_Logo.svg/800px-Logo%21_Logo.svg.png" class="img-responsive logo" /></a>
+      <a href="<?php $block->getBaseUrl(); ?>"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Logo%21_Logo.svg/800px-Logo%21_Logo.svg.png" class="img-responsive logo" /></a>
     </div>
     <ul class="nav navbar-nav pull-right">
       <li><a href="<?php $block->getBaseUrl(); ?>/magento-support" class="dropdown-toggle" data-toggle="dropdown">Magento Support <span class="fa fa-angle-down"></span></a>
@@ -22,9 +22,9 @@ $categories = $subCategory->getChildrenCategories();
             <li><a href="<?php $block->getBaseUrl(); ?>/shopify-plus">Shopify Plus</a></li>
           </ul>
       </li>
-      <li><a href="#">Website Design</a></li>
-      <li><a href="#">Blog</a></li>
-      <li><a href="#">About</a></li>
+      <li><a href="<?php $block->getBaseUrl(); ?>/website-design">Website Design</a></li>
+      <li><a href="<?php $block->getBaseUrl(); ?>/blog">Blog</a></li>
+      <li><a href="<?php $block->getBaseUrl(); ?>/about-us">About</a></li>
     </ul>
   </div>
 </nav>

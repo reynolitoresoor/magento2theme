@@ -340,4 +340,170 @@ form.contact-form button {
 .the-benefits-of-migrating-magento-1-to-magento-2 .pagebuilder-column-group {
     margin-top: 200px;
 }
+.py-25 {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.border-orange {
+    border-color: 1px solid #f57b20;
+}
+.border-orange-left {
+    border-left: 2px solid #f57b20;
+}
+.border-orange-right {
+    border-right: 2px solid #f57b20;
+}
+.markbox {
+    position: relative;
+    height: inherit;
+}
+.mark, .symbol {
+    position: absolute;
+}
+.mark {
+    right: 50%;
+    top: -230px;
+    background-color: unset;
+}
+.upper {
+    right: -26px;
+}
+.symbol {
+    height: 45px;
+    width: 48px;
+    background: #fff;
+    border-radius: 999px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #70a84e;
+}
+audio, canvas, embed, iframe, img, object, svg, video {
+    vertical-align: middle;
+}
 /* End the benefits of migrating magento 1 to magento 2 page */
+/* Shopify plus page */
+.shopify-plus-header {
+    z-index: -100;
+    background-image: url(https://cdn.sanity.io/images/v32r25bv/production/9d14483b53495a7406ae1a4a28aec2a53b77c547-1279x621.png?w=800&h=388&fit=crop&fm=webp);
+    opacity: 1;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 750px;
+    top: 0;
+    left: 0;
+    transition: opacity 0.5s ease 500ms;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.shopify-plus-mark {
+    position: absolute;
+}
+.shopify-plus-mark {
+    right: 50%;
+    top: -200px;
+    background-color: unset;
+}
+/* End shopify plus page */
+/* Website design page */
+.website-design-header {
+    z-index: -100;
+    background-image: url(https://cdn.sanity.io/images/v32r25bv/production/c232cbf87be9f5f18c1b988952009d55e251667c-1279x621.jpg?w=800&h=388&fit=crop&fm=webp);
+    opacity: 1;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 750px;
+    top: 0;
+    left: 0;
+    transition: opacity 0.5s ease 500ms;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.website-design-header img {
+    width: 30%!important;
+}
+/* End website design page */
+/* About page */
+.about-us-header {
+    z-index: -100;
+    background-image: url(https://cdn.sanity.io/images/v32r25bv/production/77fa5243b716dc21e4a4f13719a1f732089cfe96-1279x621.jpg?w=800&h=388&fit=crop&fm=webp);
+    opacity: 1;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 750px;
+    top: 0;
+    left: 0;
+    transition: opacity 0.5s ease 500ms;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.about-us-header img {
+    width: 10%!important;
+}
+/* End about page */
+/* Shopify support page */
+.shopify-support-header {
+    z-index: -100;
+    background-image: url(https://cdn.sanity.io/images/v32r25bv/production/02bdaa25f85d11ee048930e4cd6e6542a7456527-1279x621.jpg?w=800&h=388&fit=crop&fm=webp);
+    opacity: 1;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 750px;
+    top: 0;
+    left: 0;
+    transition: opacity 0.5s ease 500ms;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.shopify-support-header img {
+    width: 10%!important;
+}
+/* End shopify support page */
+/* Blog page */
+.blog-header {
+    z-index: -100;
+    background-image: url(https://cdn.sanity.io/images/v32r25bv/production/a792976549566b909f5734b2c5665d623d423a68-1279x621.jpg?w=800&h=388&fit=crop&fm=webp);
+    opacity: 1;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 750px;
+    top: 0;
+    left: 0;
+    transition: opacity 0.5s ease 500ms;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.blog-header img {
+    width: 30%!important;
+}
+/* End blog page */
+/* Magento support page */
+.magento-support-header {
+    z-index: -100;
+    background-image: url(https://cdn.sanity.io/images/v32r25bv/production/12f1062312c0bfa8629fe9c31a4c439ebf21e5c2-1279x621.jpg?w=800&h=388&fit=crop&fm=webp);
+    opacity: 1;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 750px;
+    top: 0;
+    left: 0;
+    transition: opacity 0.5s ease 500ms;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.magento-support-header img {
+    width: 10%!important;
+}
+/* End magento support page */

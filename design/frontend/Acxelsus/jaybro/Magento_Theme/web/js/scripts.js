@@ -17,5 +17,22 @@ require([
         $('.navigation ul li.my-quoate').hover(function () {
             $('.about-us-container').hide();
         });
+
+        $('h3.about-jaybro').click(function () {
+            $(this).find('span').toggleClass('fa-angle-down');
+            $('ul.about-jaybro').slideToggle();
+        });
+        $('h3.customer-support').click(function () {
+            $(this).find('span').toggleClass('fa-angle-down');
+            $('ul.customer-support').slideToggle();
+        });
+        $('h3.my-account').click(function () {
+            $(this).find('span').toggleClass('fa-angle-down');
+            $('ul.my-account').slideToggle();
+        });
+        $('h3.contact-info').click(function () {
+            $(this).find('span').toggleClass('fa-angle-down');
+            $('ul.contact-info').slideToggle();
+        });
     });
 });

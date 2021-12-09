@@ -2046,8 +2046,8 @@ h2.openPositions-heading {
     text-align: center;
     color: #00205b;
     border-bottom: none !important;
-    margin-top: 60px!important;
-    margin-bottom: 28px!important;
+    margin-top: 60px!;
+    margin-bottom: 28px!;
 }
 .openPositions-content-container {
     margin-bottom: 63px;
@@ -2330,6 +2330,11 @@ a.btn-yellow:hover {
     padding:150px 0 0 0
 }
 /* End book now page */
+/* Jaybro catalogue page */
+div.navicon, .cmsMobNacIcoClose {
+    display: none;
+}
+/* End jaybro catalogue */
 /* Media query for mobile */
 @media only screen and (min-width: 320px) and (max-width: 480px) {
     .header-top {
@@ -2389,6 +2394,9 @@ a.btn-yellow:hover {
     .home-slider-box, .home-slider, .websiteswitcher {
        display: none;
     }
+    .page-heading {
+        padding-left: 20px;
+    }
     h2.why-choose-jaybro {
         max-width: 90%;
     }
@@ -2438,6 +2446,231 @@ a.btn-yellow:hover {
     .footer-container ul {
         margin: 0px 15px!important;
     }
+    /* About page */
+    .rc-container-desktop {
+        display: none!important;
+    }
+    .ceo-letter-row, .striveToBeOutstanding-container {
+        padding: 25px;
+    }
+    .striveToBeOutstanding-container .single-item_container {
+        margin-bottom: 10px;
+    }
+    .making-life-easier-container .pagebuilder-column {
+        padding-right: unset;
+    }
+    .iframe-container iframe {
+        width: 100%!important;
+        height: 220px!important;
+    }
+    .jayBroFactSheet-container-inner {
+        height: 200px;
+        padding: 10px 10px;
+    }
+    .jayBroFactSheet-heading {
+        width: 45%;
+    }
+    /* End about page */
+    /* Our purpose page */
+    .whatsInItForYou-container {
+        background: unset;
+    }
+    .operating-model-container, .whatsInItForYou-container .single-item_container {
+        padding: 25px;
+    }
+    /* End our purpose page */
+    /* Our culture page */
+    .whatsInItForYou-main-heading, .whatsInItForYou_desc {
+        padding: 10px 25px;
+        margin: 10px 0px!important;
+    }
+    .whatsInItForYou-container {
+        padding: 25px;
+    }
+    .whatsInItForYou-container .single-item_container {
+        padding: unset;
+    }
+    .whatsInItForYou-container {
+        background: linear-gradient(
+    180deg, #fff 79.5%, #ffd100 79.5%);
+    }
+    .culture_section1 .culture-left-container, .culture_section3 .culture-left-container, .culture_section2 .culture-left-container {
+        padding-right: unset;
+        padding-left: unset;
+    }
+    .culture_section3, .bottomBannerSection {
+        padding: 0px 25px!important;
+    }
+    .culture_section3 iframe {
+        width: 100%!important;
+        height: 220px!important;
+    }
+    /* End our culture page */
+    /* Our people page */
+    .ourPeopleSection_1 {
+        padding: 25px;
+    }
+    .rightPeopleSingle_container {
+        padding: 0px 25px;
+    }
+    /* End our people page */
+    /* NPS page */
+    .jayBro_reviews_row, .jayBro_customer_feedback, .howWeDoIt_row_inner {
+        padding: 25px;
+    }
+    .jayBro_customer_feedback iframe, .jayBro_reviews_row iframe, .capabilitiesBrands_section1 iframe {
+        width: 100%!important;
+        height: 220px!important;
+    }
+    .nps_last_section_row {
+        padding: 25px;
+    }
+    .nps_last_section_right-col {
+        padding-left: unset;
+    }
+    /* End nps page */
+    /* Capabilities and brands page */
+    .capabilitiesBrands_section1, .coreCompanyValues_heading, .CompanyValues_row {
+        margin: 25px;
+    }
+    .capabilitiesBrands_section1_subheading {
+        padding: 10px 0px;
+        margin: 0px;
+    }
+    /* End capabilities and brands page */
+    /* Sustainability page */
+    .sustainabilityWhatsInItForYou-container, .weSourceEthically .pagebuilder-column-group, .jayBro_managing_waste {
+        padding: 25px;
+    }
+    .weSourceEthically_content_col {
+        padding-right: unset;
+    }
+    .modernSlavery_row {
+        padding: 10px;
+    }
+    .jayBro_managing_waste iframe {
+        width: 100%!important;
+        height: 220px!important;
+    }
+    /* End sustainability page */
+    /* Our history page */
+    .history-content-container, .our-history {
+        padding: 25px;
+    }
+    /* End our history page */
+    /* Careers page */
+    .whatsInItForYou-container .single-item_container {
+        margin-bottom: 15px;
+    }
+    .whatsInItForYou-ourPeopleAre-content {
+        padding: 0px 50px;
+    }
+    .section_4 {
+        margin-bottom: 0px;
+    }
+    .employees_words, .bottomBannerSection .pagebuilder-column-group {
+        padding: 25px;
+    }
+    .employees_words_block_col {
+        margin: 0px;
+    }
+    .openPositions-content-container {
+        margin: 25px;
+        padding: 10px;
+    }
+    h2.openPositions-heading {
+        margin: 0px;
+    }
+    /* End careers page */
+    /* Contact us page */
+    .contact-us-header .pagebuilder-column {
+        margin-top: 10px;
+    }
+    .send-jaybro-a-message-now {
+        width: 85%;
+        margin-bottom: 10px;
+    }
+    .contact-form-subheading {
+        width: 85%;
+    }
+    .contact-us-form button {
+        margin-top: 10px;
+    }
+    .contact-branch-container {
+        padding: 15px;
+    }
+    .jaybro-catalogue-image-container {
+        padding: 25px;
+    }
+    /* End contact us page */  
+    /* Jaybro catalogue page */
+    div.navicon {
+        display: block;
+        background-color: #f9f9f9;
+        background-size: 24px auto;
+        padding: 10px;
+        color: #08a8de;
+        cursor: pointer;
+        font-weight: 500;
+        border: 1px solid #eee;
+        margin-bottom: 11px;
+        margin: 0px 25px 25px 25px;
+    }
+    div.navicon span.fa-navicon, .cmsMobNacIcoClose .fa-close {
+        font-size: 2em;
+    }
+    .sidebar-main {
+        width: 100%;
+        width: 100%;
+        background: #1ba6df;
+        padding: 25px 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        overflow-y: auto;
+        z-index: 9999999991;
+        transition: all .5s ease;
+        -webkit-transition: all .5s ease;
+        left: -100%;
+    }
+    ul.jaybroAboutUsSideNavigation {
+        margin-top: 30px;
+    }
+    ul.jaybroAboutUsSideNavigation li a {
+        border-bottom: 1px solid #fff;
+        color: #fff;
+    }
+    .cmsMobNacIcoClose {
+        display: block;
+        background-color: #0d2c6d;
+        color: #fff;
+        padding: 15px;
+        position: absolute;
+        top: 0px;
+        width: 100%;
+    }
+    .jayBro_policies .pagebuilder-column {
+        padding: 15px;
+        word-break: break-all;
+    }
+    .jayBro_shipping .pagebuilder-column {
+        margin-right: 60px!important;
+    }
+    /* End jaybro catalogue page */
+    /* Used concrete barriers for sale */
+    .jayBro_used_concrete_barriers_for_sale {
+        margin: 40px 20px 25px!important;
+    }
+    .whitefont {
+        padding: 10px;
+    }
+    /* End concrete barriers for sale page */
+    /* Book now page */
+    .jayBro_popular_respirators .pagebuilder-column {
+        text-align: center;
+    }
+    /* End book now page */
 }
 /* End media query for mobile */
 
@@ -2497,6 +2730,9 @@ a.btn-yellow:hover {
     .minicart-wrapper .action.showcart:before {
         right: 0px;
     }
+    .page-heading {
+        padding-left: 20px;
+    }
     .home-slider-box, .home-slider, .websiteswitcher {
        display: none;
     }
@@ -2549,6 +2785,24 @@ a.btn-yellow:hover {
     .footer-container ul {
         margin: 0px 15px!important;
     }
+    /* About page */
+    .rc-container-desktop {
+        display: none!important;
+    }
+    .ceo-letter-row, .striveToBeOutstanding-container {
+        padding: 25px;
+    }
+    .striveToBeOutstanding-container .single-item_container {
+        margin-bottom: 10px;
+    }
+    .jayBroFactSheet-container-inner {
+        height: 200px;
+        padding: 10px 10px;
+    }
+    .jayBroFactSheet-heading {
+        width: 45%;
+    }
+    /* End about page */
 }
 /* End media query for tablets */
 

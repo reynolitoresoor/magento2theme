@@ -5,26 +5,30 @@ $catId = 2;  //Parent Category ID
 $subCategory = $objectManager->create('Magento\Catalog\Model\Category')->load($catId);
 $categories = $subCategory->getChildrenCategories();
 ?>
-<nav class="navbar">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a href="<?php $block->getBaseUrl(); ?>"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Logo%21_Logo.svg/800px-Logo%21_Logo.svg.png" class="img-responsive logo" /></a>
+<div class="navbar navbar-default">
+ <div class="navbar-header"><a class="navbar-brand" href="/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Logo%21_Logo.svg/800px-Logo%21_Logo.svg.png" class="img-responsive logo" /></a>
+      <a class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
     </div>
-    <ul class="nav navbar-nav pull-right">
-      <li><a href="<?php $block->getBaseUrl(); ?>/magento-support" class="dropdown-toggle" data-toggle="dropdown">Magento Support <span class="fa fa-angle-down"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="<?php $block->getBaseUrl(); ?>/magento-2-migration">Magento 2 Migration</a></li>
-            <li><a href="<?php $block->getBaseUrl(); ?>/the-benefits-of-migrating-magento-1-to-magento-2">Magento 2</a></li>
-          </ul>
-      </li>
-      <li><a href="<?php $block->getBaseUrl(); ?>/shopify-support" class="dropdown-toggle" data-toggle="dropdown">Shopify Support <span class="fa fa-angle-down"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="<?php $block->getBaseUrl(); ?>/shopify-plus">Shopify Plus</a></li>
-          </ul>
-      </li>
-      <li><a href="<?php $block->getBaseUrl(); ?>/website-design">Website Design</a></li>
-      <li><a href="<?php $block->getBaseUrl(); ?>/blog">Blog</a></li>
-      <li><a href="<?php $block->getBaseUrl(); ?>/about-us">About</a></li>
-    </ul>
-  </div>
-</nav>
+    <div class="navbar-collapse collapse pull-right">
+      <ul class="nav navbar-nav">
+        <li><a href="<?php $block->getBaseUrl(); ?>/magento-support" class="dropdown-toggle" data-toggle="dropdown">Magento Support <span class="fa fa-angle-down"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="<?php $block->getBaseUrl(); ?>/magento-2-migration">Magento 2 Migration</a></li>
+              <li><a href="<?php $block->getBaseUrl(); ?>/the-benefits-of-migrating-magento-1-to-magento-2">Magento 2</a></li>
+            </ul>
+        </li>
+        <li><a href="<?php $block->getBaseUrl(); ?>/shopify-support" class="dropdown-toggle" data-toggle="dropdown">Shopify Support <span class="fa fa-angle-down"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="<?php $block->getBaseUrl(); ?>/shopify-plus">Shopify Plus</a></li>
+            </ul>
+        </li>
+        <li><a href="<?php $block->getBaseUrl(); ?>/website-design">Website Design</a></li>
+        <li><a href="<?php $block->getBaseUrl(); ?>/blog">Blog</a></li>
+        <li><a href="<?php $block->getBaseUrl(); ?>/about-us">About</a></li>
+      </ul>
+    </div>
+</div>

@@ -2195,9 +2195,9 @@ ul.navigation-aboutus li a {
     border-bottom: 2px solid #0e346d;
 }
 .navigation ul li.our-range .submenu li.categories a {
-    color: #1ba6df!important;
-    font-size: 2rem!important;
-    line-height: 2.8rem!important;
+    color: #1ba6df;
+    font-size: 2rem;
+    line-height: 2.8rem;
     font-weight: 600;
 }
 .navigation .level0 .submenu a {
@@ -2671,6 +2671,46 @@ div.navicon, .cmsMobNacIcoClose {
         text-align: center;
     }
     /* End book now page */
+    /* Navigation */
+    .nav-sections { 
+       left: auto;
+       display: none;
+       z-index: 999;
+       width: 60%;
+    }
+    .navigation .level0 .submenu a, .navigation .level0 > .level-top {
+        color: #0d2c6d;
+    }
+    .page-footer, .footer-bottom-container, .nav-sections-items, nav.navigation {
+        background-color: #fff;
+    }
+    .navigation .level0 {
+        border: unset;
+    }
+    .nav-sections-item-title:nth-child(1), .nav-sections-item-title:nth-child(3), .nav-sections-item-title:nth-child(5) {
+        display: none;
+    }
+    .nav-sections-item-content {
+        margin-top: 0px;
+    }
+    .navigation .level0 > .level-top {
+        font-weight: unset;
+        font-size: 1.4rem;
+        text-transform: unset;
+    }
+    .nav-sections .switcher:last-child {
+        display: none;
+    }
+    .categories {
+        padding: 0px;
+    }
+    .navigation ul li.our-range .submenu li.categories a {
+        font-size: 1.4rem;
+    }
+    .navigation ul li.our-range .submenu {
+        width: 100%;
+    }
+    /* End navigation */
 }
 /* End media query for mobile */
 

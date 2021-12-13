@@ -42,5 +42,9 @@ require([
             console.log('hide sidebar');
             $('.sidebar-main').css('left', '-100%');
         });
+        $('.nav-toggle').click(function () {
+            $('.nav-sections').css('left', 'auto');
+            $('.nav-sections').toggle();
+        });
     });
 });

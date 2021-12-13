@@ -2681,7 +2681,7 @@ div.navicon, .cmsMobNacIcoClose {
     .navigation .level0 .submenu a, .navigation .level0 > .level-top {
         color: #0d2c6d;
     }
-    .page-footer, .footer-bottom-container, .nav-sections-items, nav.navigation {
+    .nav-sections-items, nav.navigation {
         background-color: #fff;
     }
     .navigation .level0 {

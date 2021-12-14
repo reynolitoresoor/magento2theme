@@ -38,7 +38,7 @@ ul.navbar-nav li a {
     font-size: 1.2em;
     color: #fff;
 }
-ul.navbar-nav li a:hover {
+ul.navbar-nav li a:hover, .navbar-default .navbar-nav>li>a:hover {
     color: #548f4e;
     background-color: unset;
 }
@@ -517,7 +517,7 @@ audio, canvas, embed, iframe, img, object, svg, video {
 }
 /* End magento support page */
 /* Navbar */
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
     .navbar-header {
         float: none;
     }
@@ -567,7 +567,7 @@ audio, canvas, embed, iframe, img, object, svg, video {
         border: unset;
     }
     .navbar-default .navbar-toggle {
-        border-color: #ddd;
+        border-color: #fff;
         position: relative;
         top: 40px;
         right: 40%;
@@ -592,6 +592,24 @@ audio, canvas, embed, iframe, img, object, svg, video {
     }
     .navbar-default .navbar-nav>li>a {
         color: #494c4f;
+    }
+    .border-orange-right {
+        border-right: 4px solid #f57b20;
+    }
+    .border-orange-left {
+        border-left: 4px solid #f57b20;
+    }
+    .our-clients-icon-container {
+        padding-left: 0px;
+    }
+    .website-design-header .pagebuilder-column-group:nth-child(1) .pagebuilder-column, .blog-header .pagebuilder-column-group:nth-child(1) .pagebuilder-column {
+        max-width: 50%;
+    }
+    .website-design-header img, .blog-header img {
+        width: 100%!important;
+    }
+    .shopify-plus-mark {
+        top: -30px;
     }
 }
 /* End navbar */

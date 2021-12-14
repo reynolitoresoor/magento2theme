@@ -108,6 +108,9 @@ span.btn-search {
     border-bottom: 2px solid #002565;
 
 }
+.mobile-backdrop {
+    display: none;
+}
 /* End header section */
 /* Website switcher */
 .websiteswitcher {
@@ -1105,6 +1108,9 @@ h3.striveToBeOutstanding-heading {
     color: #00205b;
     margin-top: 10px;
     border-radius: 0px;
+}
+.mobile-toggle-btn {
+    display: none;
 }
 /* End about us page */
 /* Our purpose page */
@@ -2336,7 +2342,7 @@ div.navicon, .cmsMobNacIcoClose {
 }
 /* End jaybro catalogue */
 /* Media query for mobile */
-@media only screen and (min-width: 320px) and (max-width: 480px) {
+@media only screen and (min-width: 320px) and (max-width: 768px) {
     .header-top {
         position: absolute;
         bottom: 0px;
@@ -2710,144 +2716,84 @@ div.navicon, .cmsMobNacIcoClose {
     .navigation ul li.our-range .submenu {
         width: 100%;
     }
+    .about-us-container {
+        margin: 15px;
+        position:absolute;
+        width: 93%;
+        top: 170px;
+    }
+    .mobile-toggle-btn {
+        height: 48px !important;
+        line-height: 48px;
+        font-family: Roboto !important;
+        font-size: 14px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        letter-spacing: normal;
+        color: #00205b;
+        padding-left: 15px;
+    }
+    .mobile-toggle-btn:after {
+        position: absolute;
+        content: "";
+        right: 10px;
+        top: 19px;
+        width: 0;
+        height: 0;
+        border-left: 7px solid transparent;
+        border-right: 7px solid transparent;
+        border-top: 8px solid #102c6d;
+    }
+    ul.navigation-aboutus{
+        display: none;
+    }
+    .about-us-container ul:before {
+        content: '';
+        border-top: unset;
+    }
+    .aboutus-navigation ul {
+        padding: 0px;
+        margin-left: 25px;
+    }
+    .aboutus-navigation ul li {
+        padding: 10px 0px;
+    }
+    .history-content-container, .our-history {
+        padding: unset;
+    }
     /* End navigation */
 }
 /* End media query for mobile */
 
 /* Media query for tablets */
 @media only screen and (min-width: 481px) and (max-width: 768px) {
-    .header-top {
-        position: absolute;
-        bottom: 0px;
-        background-color: #ffde00;
-        width: 93%;
-        margin: auto;
-        padding: 0px;
-        text-align: center;
-        margin-bottom: 10px;
-    }
-    .header-top a {
-        color: #0d2c6d;
-        text-align: center;
-    }
-    header.page-header {
-        height: 170px;
-        padding: 11px 15px 0px;
-    }
-    .logo {
-        left: 70px;
-    }
-    form.minisearch {
-        left: unset;
-        width: 92%;
-        top: 60px;
-    }
-    .block-search input {
-        font-size: 16px; 
-        left: unset;
-        margin: unset;
-        position: unset;
-        margin: 0px;
-    }
-    .block-search .control {
-        padding-left: 0px;
-    }
-    .block-search .label:before {
-        display: none;
-    }
-    span.btn-search {
-        left: unset;
-        top: 10px;
-        right: -15px;
-        width: 100px;
-    }
-    .nav-toggle:before {
-        color: #fff;
-    }
-    .authorization-link a, .showcart span:first-child {
-        display: none;
-    }
-    .minicart-wrapper .action.showcart:before {
-        right: 0px;
-    }
-    .page-heading {
-        padding-left: 20px;
-    }
-    .home-slider-box, .home-slider, .websiteswitcher {
-       display: none;
-    }
-    h2.why-choose-jaybro {
-        max-width: 90%;
-    }
-    h2.why-choose-jaybro:before {
-        position: absolute;
-        content: '';
-        background: #0d2c6d;
-        width: 201%;
-        height: 100%;
-        top: 0;
-        left: -200%;
-    }
-    .BtmTwoBxLetf {
-        margin-bottom: 15px;
-    }
-    .BtmTwoBxLetf, .BtmTwoBxRight {
-        padding: 0px 15px;
-    }
-    .homePromoButton {
-        margin-bottom: 20px!important;
-        text-align: center;
-    }
-    .footer-bottom {
-        padding: 0px;
-    }
-    .footer-logo, .copyright-container, .social-icons-container {
-        text-align: center;
-    }
-    h3.about-jaybro span, h3.customer-support span, h3.my-account span, h3.contact-info span {
-        display: block;
-    }
-    ul.about-jaybro , ul.customer-support, ul.my-account, ul.contact-info {
-        display: none;
-    }
-    .footer-links h3 {
-        border-top: 1px solid #999;
-        font-size: 1.3em;
-    }
-    .footer-links h3 {
-        border-top: 1px solid #999;
-        padding: 15px;
-        margin: 0px;
-    }
-    .footer, .footer .footer-container {
-        padding: 0px!important;
-    }
-    .footer-container ul {
-        margin: 0px 15px!important;
-    }
-    /* About page */
-    .rc-container-desktop {
-        display: none!important;
-    }
-    .ceo-letter-row, .striveToBeOutstanding-container {
-        padding: 25px;
-    }
-    .striveToBeOutstanding-container .single-item_container {
-        margin-bottom: 10px;
-    }
-    .jayBroFactSheet-container-inner {
-        height: 200px;
-        padding: 10px 10px;
-    }
-    .jayBroFactSheet-heading {
-        width: 45%;
-    }
-    /* End about page */
+    
 }
 /* End media query for tablets */
 
 /* Media query for laptops */
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
+    form.minisearch {
+        left: -250px;
+        width: 250px;
+    }
+    .mobile-toggle-btn {
+        display: none;
+    }
+    span.btn-search {
+        width: 100px;
+        left: 250px;
+    }
+    .header-top {
+        padding-right: 15px;
+    }
+    .jayBroFactSheet-container-inner {
+        height: 180px;
+    }
+    .page-heading {
+        margin-left: 50px!important;
+    }
 
 }
 /* End media query for laptops */

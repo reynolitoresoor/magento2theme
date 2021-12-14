@@ -46,5 +46,8 @@ require([
             $('.nav-sections').css('left', 'auto');
             $('.nav-sections').toggle();
         });
+        $('.mobile-toggle-btn').click(function () {
+            $('ul.navigation-aboutus').toggle();
+        });
     });
 });

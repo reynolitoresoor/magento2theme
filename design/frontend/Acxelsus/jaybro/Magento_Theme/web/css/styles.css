@@ -219,6 +219,9 @@ span.btn-search {
     color: #1ba6df;
     text-align: left;
 }
+#create-account-modal {
+    overflow: auto;
+}
 .create-account-description {
     list-style-type: none;
     color: #1ba6df;
@@ -275,7 +278,7 @@ button.close {
 button.close:hover {
     opacity: 1;
 }
-.modal input {
+.modal input[type=text], .modal input[type=email], .modal input[type=password] {
     height: 44px;
     border: 1px solid #0d2c6d;
     outline: none;
@@ -326,6 +329,9 @@ button.close:hover {
 }
 .image-icon-container, .sms-container {
     padding: 30px;
+}
+.recaptcha {
+    margin-bottom: 15px;
 }
 /* End modals modal */
 /* Footer section */

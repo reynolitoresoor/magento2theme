@@ -2,6 +2,12 @@ require([
     "jquery"
 ], function ($) {
     $(document).ready(function () {
+        grecaptcha.ready(function() {
+            grecaptcha.execute('6LeUQ74dAAAAAMy19BuxhL-popj-9Ea9Cjuf3Z8_', {action: '/'}).then(function() {
+
+            });
+        });
+
         $('.navigation ul li.about-jaybro').hover(function () {
             $('.about-us-container').fadeIn().show();
         });
@@ -49,5 +55,6 @@ require([
         $('.mobile-toggle-btn').click(function () {
             $('ul.navigation-aboutus').toggle();
         });
+        
     });
 });

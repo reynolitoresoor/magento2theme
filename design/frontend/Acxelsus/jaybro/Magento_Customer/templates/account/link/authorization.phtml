@@ -11,10 +11,14 @@
 $dataPostParam = '';
 if ($block->isLoggedIn()) {
     $dataPostParam = sprintf(" data-post='%s'", $block->getPostParams());
+    $custom_class = 'href="'.$block->getBaseUrl().'customer/account/logout/"';
+} else {
+    $custom_class = 'data-toggle="modal" data-target="#login-modal"';
 }
 ?>
-<li class="authorization-link" data-label="<?= $block->escapeHtml(__('or')) ?> login-popup" data-toggle="modal" data-target="#login-modal">
-    <span class="fa fa-user" id="user-icon"></span><a <?php /* @noEscape */ /*$block->getLinkAttributes()*/ ?><?= /* @noEscape */ $dataPostParam ?>>
+<li class="authorization-link" data-label="<?= $block->escapeHtml(__('or')) ?> login-popup">
+    <span class="fa fa-user" id="user-icon"></span>
+    <a <?php /* @noEscape */ /*$block->getLinkAttributes()*/ ?><?= /* @noEscape */ $dataPostParam ?> <?= /* @noEscape */ $custom_class ?>>
         <?= $block->escapeHtml($block->getLabel()) ?>
     </a>
 </li>

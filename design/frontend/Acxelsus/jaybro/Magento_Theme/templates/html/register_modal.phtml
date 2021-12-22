@@ -1,7 +1,7 @@
 <!-- Create Account Modal -->
 <div class="modal fade" id="create-account-modal" role="dialog">
     <div class="modal-dialog">
-    
+    <form action="<?= $block->escapeUrl($block->getPostActionUrl()) ?>" method="post" id="form-validate" enctype="multipart/form-data" autocomplete="off">
       <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header" style="border-bottom: 0px;">
@@ -13,7 +13,6 @@ to move through the checkout process faster.</p>
           </div>
         </div>
         <div class="modal-body">
-          <form action="<?= $block->escapeUrl($block->getPostActionUrl()) ?>" method="post" id="form-validate" enctype="multipart/form-data" autocomplete="off">
             <fieldset class="fieldset create info">
                 <legend class="legend"><span>Personal Information</span></legend><br>
                 <input type="hidden" name="success_url" value="">
@@ -39,24 +38,15 @@ to move through the checkout process faster.</p>
                     <input type="password" name="password_confirmation" title="Confirm Password" id="password-confirmation" class="input-text password" data-validate="{required:true, equalTo:'#password'}" autocomplete="off" placeholder="Confirm Password*" required="">
                 </div>
             </fieldset>
-            <div class="form-group">
-              <input name="password" type="password" autocomplete="off" class="input-text" id="password" title="Password" data-validate="{required:true}" placeholder="Password" required="" aria-required="true">
-            </div>
             <div class="checkbox">
                 <label><input type="checkbox" checked> Sign-up for Newsletter
             </label>
             </div>
-            <div class="row actions-toolbar">
-               <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                  <button type="submit" class="btn-signin">Sign In</button>
-               </div>
-            </div>
-          </form>
         </div>
         <div class="modal-footer" style="border-top: 0px;">
-          <button type="submit" class="btn btn-default btn-register" data-dismiss="modal">Create An Account</button>
+          <button type="submit" class="btn btn-default btn-register">Create An Account</button>
         </div>
       </div>
-      
+      </form>
     </div>
 </div>

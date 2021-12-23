@@ -3,11 +3,19 @@ require([
 ], function ($) {
     $(document).ready(function () {
         grecaptcha.ready(function() {
-            grecaptcha.execute('6LeUQ74dAAAAAMy19BuxhL-popj-9Ea9Cjuf3Z8_', {action: '/'}).then(function() {
-
+            grecaptcha.execute('6LcLUL4dAAAAABA-cbJjMDOX6ZFlWbrPiYG0GyO9', {action: '/'}).then(function(token) {
+                console.log(token);
             });
         });
+        $('.btn-signin').click(function() {
+            var response = grecaptcha.getResponse();
 
+            if(response.length == 0){
+               console.log('recaptcha is not verified');
+            } else {
+               $('#login-form').submit();
+            }
+        });
         $('.navigation ul li.about-jaybro').hover(function () {
             $('.about-us-container').fadeIn().show();
         });

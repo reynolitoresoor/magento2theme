@@ -1,0 +1,42 @@
+/* Custom customer css */
+.sidebar-main {
+    background: unset;
+}
+body.account .sidebar.sidebar-main .block-collapsible-nav .content {
+    background: #fff;
+    border: 1px solid #0d2c6d;
+    padding: 0;
+}
+.block-collapsible-nav .item.current a, .block-collapsible-nav .item.current > strong {
+    border: unset;
+    padding: 8px 15px;
+    background: #0d2c6d;
+    color: #fff;
+    text-transform: capitalize;
+}
+body.account .sidebar.sidebar-main .block-collapsible-nav .item a {
+    border: 0;
+    color: #0d2c6d;
+    padding: 8px 15px;
+    text-transform: capitalize;
+    font-weight: 500!important;
+}
+body.account .sidebar.sidebar-main .block-collapsible-nav .item a:hover {
+    background-color: #0d2c6d;
+    color: #fff;
+}
+.main {
+    margin-top: 25px;
+}
+body.account h1.page-title, body.account h3 {
+    padding: 11px 15px;
+    margin: 0 0 25px;
+    background: #0d2c6d;
+    width: 100%;
+    display: block;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: capitalize;
+    line-height: 24px;
+}

@@ -2,20 +2,21 @@ require([
     "jquery"
 ], function ($) {
     $(document).ready(function () {
-        grecaptcha.ready(function() {
-            grecaptcha.execute('6LcLUL4dAAAAABA-cbJjMDOX6ZFlWbrPiYG0GyO9', {action: '/'}).then(function(token) {
+        grecaptcha.ready(function () {
+            grecaptcha.execute('6LcLUL4dAAAAABA-cbJjMDOX6ZFlWbrPiYG0GyO9', { action: '/' }).then(function (token) {
                 console.log(token);
             });
         });
-        $('.btn-signin').click(function() {
+        $('.btn-signin').click(function () {
             var response = grecaptcha.getResponse();
 
-            if(response.length == 0){
-               console.log('recaptcha is not verified');
+            if (response.length == 0) {
+                console.log('recaptcha is not verified');
             } else {
-               $('#login-form').submit();
+                $('#login-form').submit();
             }
         });
+
         $('.navigation ul li.about-jaybro').hover(function () {
             $('.about-us-container').fadeIn().show();
         });
@@ -63,6 +64,5 @@ require([
         $('.mobile-toggle-btn').click(function () {
             $('ul.navigation-aboutus').toggle();
         });
-        
     });
 });

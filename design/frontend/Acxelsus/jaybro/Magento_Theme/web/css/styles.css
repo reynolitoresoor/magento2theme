@@ -330,6 +330,14 @@ button.close:hover {
 .image-icon-container, .sms-container {
     padding: 30px;
 }
+.btn-signin {
+    height: 50px;
+    min-width: 225px;
+    border: 0;
+    border-radius: 0;
+    background-color: #0d2c6d!important; 
+    border: 0px;
+}
 .recaptcha {
     margin-bottom: 15px;
 }
@@ -603,7 +611,7 @@ p.homePromoText {
 .breadcrumbs .item:not(:first-child) {
     padding: 15px 0px;
 }
-.page-title-wrapper h1#page-title-heading span.base, body.catalog-category-view.page-layout-1column .categoryStaticData h2 {
+h1.page-title-heading, .page-title-wrapper h1#page-title-heading span.base, body.catalog-category-view.page-layout-1column .categoryStaticData h2 {
     font-size: 30px;
     text-transform: capitalize;
     color: #0d2c6d;

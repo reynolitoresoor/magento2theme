@@ -21,6 +21,5 @@
                 <container name="form.additional.info" as="form_additional_info"/>
             </block>
         </referenceContainer>
-        <referenceBlock name="breadcrumbs" remove="false"/>
     </body>
 </page>

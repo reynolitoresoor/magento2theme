@@ -1,0 +1,423 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+/** @var \Magento\Customer\Block\Form\Edit $block */
+
+
+$obm = \Magento\Framework\App\ObjectManager::getInstance();
+$customerSession = $obm->get('Magento\Customer\Model\Session');
+
+$subscriberObj = $obm->create('Magento\Newsletter\Model\Subscriber');
+$subscriber = $subscriberObj->loadByEmail($customerSession->getCustomer()->getEmail());
+
+
+
+
+
+// if($customerSession->isLoggedIn()) {
+
+
+// $customerSession->getCustomer()->getNewsLetter();
+// $customerSession->getCustomer()->getMallPreference();
+// $customerSession->getCustomer()->getCommPreference();
+// $customerSession->getCustomer()->getGiftPolicy();
+// $customerSession->getCustomer()->getPreQuestion();
+// $customerSession->getCustomer()->getMidQuestion();
+// $customerSession->getCustomer()->getLastQuestion();
+// $customerSession->getCustomer()->getAboutUs();
+
+// }
+
+?>
+<form class="form form-edit-account" action="<?= $block->escapeUrl($block->getUrl('profile/index/index')) ?>" method="post" id="form-validate" enctype="multipart/form-data" data-hasrequired="<?= $block->escapeHtmlAttr(__('* Required Fields')) ?>" autocomplete="off">
+    <fieldset class="fieldset info">
+        <?= $block->getBlockHtml('formkey') ?>
+		  <input type="hidden" name="formtype" value="main" />
+
+        <legend class="legend"><span><?= $block->escapeHtml(__('Account Information')) ?></span></legend>
+		<br/>
+		
+		
+		
+		<?php 
+		if($customerSession->isLoggedIn() && !empty($customerSession->getCustomer()->getId())) {
+				$om = \Magento\Framework\App\ObjectManager::getInstance();
+				$customerSession = $om->create('Magento\Customer\Model\Session');
+				$customerId = $customerSession->getCustomer()->getId();//get id of customer
+				//print_r($customerId); die;
+				$customerData = $om->create('Magento\Customer\Model\Customer')->load($customerId);
+				$p21contactid = $customerData->getData('p21contactid');
+				//print_r($p21contactid); die;
+		?>  
+		
+		
+		
+		<div class="field field-name-accountId required">
+                        <div class="control">
+                <input type="text" id="accountId" name="accountId" readonly="true" value="Account Number:  <?php echo $p21contactid; ?>" title="First Name" placeholder="First Name" required="" class="input-text required-entry" data-validate="{required:true}">
+ <input type="hidden" id="accountId" name="accountid" readonly="true" value="<?php echo $customerSession->getCustomer()->getId(); ?>" title="First Name" placeholder="First Name" required="" class="input-text required-entry" data-validate="{required:true}">
+								
+				<input type="text" id="customer_email" name="customer_email" readonly="true" value="User Name:  <?php echo $customerSession->getCustomer()->getEmail(); ?>" title="First Name" placeholder="First Name" required="" class="input-text required-entry" data-validate="{required:true}">
+           
+            </div>
+        </div>
+		<?php }?>
+		
+		<?= $block->getLayout()->createBlock(\Magento\Customer\Block\Widget\Name::class)->setObject($block->getCustomer())->toHtml() ?>
+
+        
+		
+        <?php $_dob = $block->getLayout()->createBlock(\Magento\Customer\Block\Widget\Dob::class) ?>
+        <?php $_taxvat = $block->getLayout()->createBlock(\Magento\Customer\Block\Widget\Taxvat::class) ?>
+        <?php $_gender = $block->getLayout()->createBlock(\Magento\Customer\Block\Widget\Gender::class) ?>
+		
+		<div class="field field-name-email required">
+                        <div class="control">
+                <input type="text" id="customer_email" name="customer_email"  value="<?php echo $customerSession->getCustomer()->getEmail(); ?>" title="Email" placeholder="Email Address" required="" class="input-text required-entry" data-validate="{required:true}">
+				  </div>
+        </div>
+		<div class="field field-name-phone required">
+                        <div class="control">
+                <input type="text" id="phone" name="phone"  value="<?php echo $customerSession->getCustomer()->getNameTest(); ?>" title="Phone" placeholder="Phone " required="" class="input-text required-entry" data-validate="{required:true}">
+				  </div>
+        </div>
+		
+		<div class="field field-name-mobile required">
+                        <div class="control">
+                <input type="text" id="mobile_no" name="mobile_no"  value="<?php echo $customerSession->getCustomer()->getMobileNo(); ?>" title="Mobile" placeholder="Mobile " required="" class="input-text required-entry" data-validate="{required:true}">
+				  </div>
+        </div>
+		
+		<div class="field field-name-jobtitle required">
+                        <div class="control">
+                  <input type="text" id="job_title" name="job_title"  value="<?php echo $customerSession->getCustomer()->getJobTitle(); ?>" title="Job  Title" placeholder="Job Title"  class="input-text required-entry" data-validate="{required:true}">
+           
+            </div>
+        </div>
+		
+		
+		<div class="field field-name-your_industry required">
+                        <div class="control">
+						<select name="your_industry" id="your_industry">
+						 <option selected value="">Your industry</option>
+						 <option <?php if($customerSession->getCustomer()->getYourIndustry() == "civilcontractors") echo "selected";  ?> value="civilcontractors">Civil Contractors</option>
+						 <option <?php if($customerSession->getCustomer()->getYourIndustry() == "buildingcontractors") echo "selected";  ?> value="builidingcontractors">Building Contractors</option>
+						 <option <?php if($customerSession->getCustomer()->getYourIndustry() == "trafficcontrollers") echo "selected";  ?> value="trafficcontrollers">Traffic Controllers</option>
+						 <option <?php if($customerSession->getCustomer()->getYourIndustry() == "councils,utilities&governmentdepts") echo "selected";  ?> value="councils,utilities&governmentdepts">Councils, Utilities & Government Departments</option>
+						 <option <?php if($customerSession->getCustomer()->getYourIndustry() == "resellers") echo "selected";  ?> value="resellers">Resellers</option>
+						 <option <?php if($customerSession->getCustomer()->getYourIndustry() == "hirecompanies") echo "selected";  ?> value="hirecompanies">Hire Companies</option>
+						 <option <?php if($customerSession->getCustomer()->getYourIndustry() == "mining") echo "selected";  ?> value="mining">Mining</option>
+						 <option <?php if($customerSession->getCustomer()->getYourIndustry() == "industry") echo "selected";  ?> value="industy">Industry</option>
+						 <option <?php if($customerSession->getCustomer()->getYourIndustry() == "corporate") echo "selected";  ?> value="corporate">Corporate</option>
+						 <option <?php if($customerSession->getCustomer()->getYourIndustry() == "designengineers_consultants") echo "selected";  ?> value="designengineers_consultants">Design Engineers/Consultants</option>
+						 <option <?php if($customerSession->getCustomer()->getYourIndustry() == "other") echo "selected";  ?> value="other">Other</option>
+						
+						</select>
+                </div>
+        </div>
+		
+		
+		<div class="field field-name-abut_us required">
+                        <div class="control">
+                  <select name="about_us" id="about_us">
+						 <option selected value="">How did you hear about us ? </option>
+						 <option <?php if($customerSession->getCustomer()->getAboutUs() == "Word of mouth") echo "selected";  ?> value="Word of mouth">Word of mouth</option>
+						 <option <?php if($customerSession->getCustomer()->getAboutUs() == "Google search") echo "selected";  ?> value="Google Search">Google Search</option>
+						 <option <?php if($customerSession->getCustomer()->getAboutUs() == "Received a call") echo "selected";  ?> value="Received a call">Received a call</option>
+						 <option <?php if($customerSession->getCustomer()->getAboutUs() == "Received an email") echo "selected";  ?> value="Received an email">Received an email</option>
+						 <option <?php if($customerSession->getCustomer()->getAboutUs() == "Other") echo "selected";  ?> value="Other">Other</option>
+                      `
+						
+						</select>
+            </div>
+        </div>
+        
+		
+		
+		
+        <?php if ($_dob->isEnabled()) : ?>
+            <?= $_dob->setDate($block->getCustomer()->getDob())->toHtml() ?>
+        <?php endif ?>
+        <?php if ($_taxvat->isEnabled()) : ?>
+            <?= $_taxvat->setTaxvat($block->getCustomer()->getTaxvat())->toHtml() ?>
+        <?php endif ?>
+        <?php if ($_gender->isEnabled()) : ?>
+            <?= $_gender->setGender($block->getCustomer()->getGender())->toHtml() ?>
+        <?php endif ?>
+		<div class="actions-toolbar">
+	        <div class="primary">
+            <button type="submit" class="action save primary" title="<?= $block->escapeHtmlAttr(__('Save')) ?>"><span><?= $block->escapeHtml(__('Save')) ?></span></button>
+        </div>
+		
+        <div class="field choice">
+            <input type="checkbox" name="change_email" id="change-email" data-role="change-email" value="1" title="<?= $block->escapeHtmlAttr(__('Change Email')) ?>" class="checkbox" />
+            <label class="label" for="change-email"><span><?= $block->escapeHtml(__('Change Email')) ?></span></label>
+        </div>
+        <div class="field choice">
+            <input type="checkbox" name="change_password" id="change-password" data-role="change-password" value="1" title="<?= $block->escapeHtmlAttr(__('Change Password')) ?>"<?php if ($block->getChangePassword()) : ?> checked="checked"<?php endif; ?> class="checkbox" />
+            <label class="label" for="change-password"><span><?= $block->escapeHtml(__('Change Password')) ?></span></label>
+        </div>
+    </fieldset>
+
+</form>
+
+<form class="form form-edit-account" action="<?= $block->escapeUrl($block->getUrl('profile/index/index')) ?>" method="post" id="form-validate2" enctype="multipart/form-data" data-hasrequired="<?= $block->escapeHtmlAttr(__('* Required Fields')) ?>" autocomplete="off">
+<?= $block->getBlockHtml('formkey') ?>
+	<input type="hidden" id="accountId" name="accountid" readonly="true" value="<?php echo $customerSession->getCustomer()->getId(); ?>" title="First Name" placeholder="First Name" required="" class="input-text required-entry" data-validate="{required:true}">
+  <input type="hidden" name="formtype" value="password" />
+
+    <fieldset class="fieldset password" data-container="change-email-password">
+        <legend class="legend"><span data-title="change-email-password"><?= $block->escapeHtml(__('Change Email and Password')) ?></span></legend>
+		<br/>
+        <div class="field email required" data-container="change-email">
+            <label class="label" for="email"><span><?= $block->escapeHtml(__('Email')) ?></span></label>
+            <div class="control">
+                <input type="email" name="email" id="email" autocomplete="email" data-input="change-email" value="<?= $block->escapeHtmlAttr($block->getCustomer()->getEmail()) ?>" title="<?= $block->escapeHtmlAttr(__('Email')) ?>" class="input-text" data-validate="{required:true, 'validate-email':true}" />
+            </div>
+        </div>
+        <div class="field password current required">
+            <label class="label" for="current-password"><span><?= $block->escapeHtml(__('Current Password')) ?></span></label>
+            <div class="control">
+                <input type="password" class="input-text" name="current_password" id="current-password" data-input="current-password" autocomplete="off" placeholder="Current Password" />
+            </div>
+        </div>
+        <div class="field new password required" data-container="new-password">
+            <label class="label" for="password"><span><?= $block->escapeHtml(__('New Password')) ?></span></label>
+            <div class="control">
+                <input type="password" class="input-text" name="password" id="password"
+                    data-password-min-length="<?= $block->escapeHtml($block->getMinimumPasswordLength()) ?>"
+                    data-password-min-character-sets="<?= $block->escapeHtml($block->getRequiredCharacterClassesNumber()) ?>"
+                    data-input="new-password"
+                    data-validate="{required:true, 'validate-customer-password':true}"
+                    autocomplete="off"
+					placeholder="New Password"
+					/>
+                <div id="password-strength-meter-container" data-role="password-strength-meter" aria-live="polite">
+                    <div id="password-strength-meter" class="password-strength-meter">
+                        <?= $block->escapeHtml(__('Password Strength')) ?>:
+                        <span id="password-strength-meter-label" data-role="password-strength-meter-label">
+                            <?= $block->escapeHtml(__('No Password')) ?>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="field confirm password required" data-container="confirm-password">
+            <label class="label" for="password-confirmation"><span><?= $block->escapeHtml(__('Confirm New Password')) ?></span></label>
+            <div class="control">
+                <input type="password" class="input-text" name="password_confirmation" id="password-confirmation"
+                    data-input="confirm-password"
+                    autocomplete="off" placeholder="Confirm New Password" /> 
+            </div>
+        </div>
+    </fieldset>
+	
+	
+	
+    <?= $block->getChildHtml('form_additional_info') ?>
+    <div class="actions-toolbar" id="change-email-password-action" style="display:none;">
+		<div class="primary">
+            <button type="submit" class="action save primary" title="<?= $block->escapeHtmlAttr(__('Save')) ?>"><span><?= $block->escapeHtml(__('Save')) ?></span></button>
+		</div>
+		
+        <div class="secondary">
+            <a class="action back" href="<?= $block->escapeUrl($block->getBackUrl()) ?>"><span><?= $block->escapeHtml(__('Go back')) ?></span></a>
+        </div>
+    </div>
+	
+	</form>
+	
+	<form class="form form-edit-account" action="<?= $block->escapeUrl($block->getUrl('profile/index/index')) ?>" method="post" id="form-validate3" enctype="multipart/form-data" data-hasrequired="<?= $block->escapeHtmlAttr(__('* Required Fields')) ?>" autocomplete="off">
+
+	<?= $block->getBlockHtml('formkey') ?>
+	<input type="hidden" id="accountId" name="accountid" readonly="true" value="<?php echo $customerSession->getCustomer()->getId(); ?>" title="First Name" placeholder="First Name" required="" class="input-text required-entry" data-validate="{required:true}" />
+	<input type="hidden" name="formtype" value="security" />
+
+ 
+	<div class="jaybro-sequrity">
+	
+		<legend class="page-title  legend"><span><?= $block->escapeHtml(__('SECURITY QUESTIONS')) ?></span></legend>
+		<br/>
+		
+		<div class="field field-name-question1 required">
+			<div class="control">
+				  <input type="text" id="question1" name="question1"  readonly="ture" value="" title="Job  Title" placeholder="What's your favourite sport?"  class="input-text"/>
+				 <br/>
+				 <input id="answer1" value="<?php echo $customerSession->getCustomer()->getPreQuestion() ?>" name="answer1" type="text" placeholder="answer"/>
+			</div>
+		</div>
+		
+		
+		<div class="field field-name-question2 required">
+			<div class="control">
+                  <input type="text" id="question2" name="question2"  readonly="ture" value="" title="Job  Title" placeholder="Which city were your born?"  class="input-text"/>
+				<br/>
+				<input id="answer2" name="answer2" value="<?php echo $customerSession->getCustomer()->getMidQuestion() ?>" type="text" placeholder="answer"/>
+            </div>
+        </div>
+		
+		<div class="field field-name-question3 required">
+                        <div class="control">
+                  <input type="text" id="question3" name="question3"  readonly="ture" value="" title="Job  Title" placeholder="Who was your childhood hero?"  class="input-text"/>
+				<br/>
+				<input type="text"id="answer3" name="answer3" value="<?php echo $customerSession->getCustomer()->getLastQuestion() ?>" placeholder="answer"/>
+            </div>
+        </div>
+		<br/><br/><br/>&nbsp;&nbsp;
+	 <div class="actions-toolbar">
+        <div class="primary">
+            <button type="submit" class="action save primary" title="<?= $block->escapeHtmlAttr(__('Save')) ?>"><span><?= $block->escapeHtml(__('Save')) ?></span></button>
+        </div>
+	</div>
+
+</div>
+</form>
+
+<form class="form form-edit-account" action="<?= $block->escapeUrl($block->getUrl('profile/index/index')) ?>" method="post" id="form-validate4" enctype="multipart/form-data" data-hasrequired="<?= $block->escapeHtmlAttr(__('* Required Fields')) ?>" autocomplete="off">
+
+<?= $block->getBlockHtml('formkey') ?>
+ <input type="hidden" id="accountId" name="accountid" readonly="true" value="<?php echo $customerSession->getCustomer()->getId(); ?>" title="First Name" placeholder="First Name" required="" class="input-text required-entry" data-validate="{required:true}">
+  <input type="hidden" name="formtype" value="preference" />
+
+<div class="jaybri-preference">
+ <legend class="legend page-title "><span><?= $block->escapeHtml(__('PREFERENCES ')) ?></span></legend>
+ <br/>
+<div class="field field-name-preference required">
+                        <div class="control">
+						<p >Does Your Workplace Have A No Gift Policy ?</p>
+                  <input type="radio" id="yes" name="giftpolicy"  value="Yes" <?php if($customerSession->getCustomer()->getGiftPolicy() == 'Yes') { echo "checked"; } ?> class="input-radio required-entry" data-validate="{required:true}">  Yes&nbsp;&nbsp;
+                 <input type="radio" id="No" name="giftpolicy"  value="No"  <?php if($customerSession->getCustomer()->getGiftPolicy() == 'No') { echo "checked"; } ?>  class="input-radio required-entry" data-validate="{required:true}">  No
+                </div>
+				
+                <legend class="legend page-title "></legend>
+				<br/>
+				
+				 <div class="control">
+						<p >Catalouge  Mall Preferences</p>
+                  <input type="radio" id="yes" name="mall_preference"  value="Yes" <?php if($customerSession->getCustomer()->getMallPreference() == 'Yes') { echo "checked"; } ?>  title="Job  Title" placeholder="what was the dream job as a child ?"  class="input-radio required-entry" data-validate="{required:true}">  Yes - Received Posted Catalogue &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				<input type="radio" id="No" name="mall_preference"  value="No" <?php if($customerSession->getCustomer()->getMallPreference() == 'No') { echo "checked"; }  ?> class="input-radio required-entry" data-validate="{required:true}">  No - Dont Send Posted Catalogue
+                </div>
+				                <legend class="legend page-title "></legend>
+								<br/>
+
+				 <div class="control">
+						<p >Communication Preferences</p>
+						<?php $com_preferenceArray = explode(",",$customerSession->getCustomer()->getCommPreference()); ?>
+                 <input type="checkbox" id="Email" name="com_preference[]"    value="Email"   <?php if(in_array('Email',$com_preferenceArray)) { echo "checked"; } ?>  title="Communication"  class="input-radio required-entry" data-validate="{'validate-one-required-by-name':true}">  Email &nbsp;&nbsp;
+                 <input type="checkbox" id="Phone" name="com_preference[]"  value="Phone" <?php if(in_array('Phone',$com_preferenceArray)) { echo "checked"; } ?> title="Communication"  class="input-radio required-entry" data-validate="{'validate-one-required-by-name':true}"/>    Phone  &nbsp;&nbsp;
+                 <input type="checkbox" id="SMS" name="com_preference[]"  value="SMS"  <?php if(in_array('SMS',$com_preferenceArray)) { echo "checked"; } ?> title="Communication"   class="input-radio required-entry" data-validate="{'validate-one-required-by-name':true}"/>    SMS   &nbsp;&nbsp;
+                
+				</div>
+				                <legend class="legend page-title "></legend>
+								<br/>
+
+				 <div class="control">
+						<p >Newsletter</p>
+                  <input type="radio" id="yes" name="newsletter" <?php if ($subscriber->isSubscribed()) {  echo "checked"; } ?>  value="Yes" title="newsletter"  class="input-radio required-entry" data-validate="{required:true}"> &nbsp;&nbsp; Subscribe&nbsp;&nbsp;
+                 <input type="radio" id="no" name="newsletter" <?php if (!$subscriber->isSubscribed()) {  echo "checked"; } ?> value="No" title="newsletter"  class="input-radio required-entry" data-validate="{required:true}"> &nbsp;&nbsp; Unsubscribe
+                </div>
+					 <div class="actions-toolbar">
+        <div class="primary">
+            <button type="submit" class="action save primary" title="<?= $block->escapeHtmlAttr(__('Save')) ?>"><span><?= $block->escapeHtml(__('Save')) ?></span></button>
+        </div>
+		</div>
+
+        </div>
+		</div>
+		</form>
+<script>
+    require([
+        "jquery",
+        "mage/mage"
+    ], function($){
+        var dataForm = $('#form-validate');
+        var ignore = <?= /* @noEscape */ $_dob->isEnabled() ? '\'input[id$="full"]\'' : 'null' ?>;
+        
+        dataForm.mage('validation', {
+        <?php if ($_dob->isEnabled()) : ?>
+            errorPlacement: function(error, element) {
+                if (element.prop('id').search('full') !== -1) {
+                    var dobElement = $(element).parents('.customer-dob'),
+                        errorClass = error.prop('class');
+                    error.insertAfter(element.parent());
+                    dobElement.find('.validate-custom').addClass(errorClass)
+                        .after('<div class="' + errorClass + '"></div>');
+                }
+                else {
+                    error.insertAfter(element);
+                }
+            },
+            ignore: ':hidden:not(' + ignore + ')'
+        <?php else : ?>
+            ignore: ignore ? ':hidden:not(' + ignore + ')' : ':hidden'
+        <?php endif ?>
+        });
+		
+		var dataForm2 = $('#form-validate2');
+		dataForm2.mage('validation', {});
+		
+		var dataForm3 = $('#form-validate3');
+		dataForm3.mage('validation', {});
+		
+		var dataForm4 = $('#form-validate4');
+		dataForm4.mage('validation', {});
+		
+		$(document).ready(function() {
+			$('#change-password').click(function() {
+				if($('#change-password').is(':checked') || $('#change-email').is(':checked') ) {
+					$('#change-email-password-action').show();
+				}
+				if($('#change-password').is(':checked')==false && $('#change-email').is(':checked') ==false) {
+					$('#change-email-password-action').hide();
+				}
+			
+			});
+			$('#change-email').click(function() {
+				if($('#change-password').is(':checked') || $('#change-email').is(':checked') ) {
+					$('#change-email-password-action').show();
+				}
+				if($('#change-password').is(':checked')==false && $('#change-email').is(':checked') ==false) {
+					$('#change-email-password-action').hide();
+				}
+				
+			});
+			if($('#change-password').is(':checked')==false &&  $('#change-email').is(':checked') ==false) {
+				$('#change-email-password-action').hide();
+			}
+		
+			//$('#change-password').trigger('click');
+		});
+		
+
+    });
+	
+	
+	
+	
+	
+</script>
+<script type="text/x-magento-init">
+    {
+        "[data-role=change-email], [data-role=change-password]": {
+            "changeEmailPassword": {
+                "titleChangeEmail": "<?= $block->escapeJs($block->escapeHtml(__('Change Email'))) ?>",
+                "titleChangePassword": "<?= $block->escapeJs($block->escapeHtml(__('Change Password'))) ?>",
+                "titleChangeEmailAndPassword": "<?= $block->escapeJs($block->escapeHtml(__('Change Email and Password'))) ?>"
+            }
+        },
+        "[data-container=new-password]": {
+            "passwordStrengthIndicator": {
+                "formSelector": "form.form-edit-account"
+            }
+        }
+    }
+</script>
+<style>
+.jaybro-sequrity {
+    clear: both;
+}
+</style>

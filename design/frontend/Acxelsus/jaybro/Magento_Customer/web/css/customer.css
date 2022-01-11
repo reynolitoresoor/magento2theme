@@ -2,33 +2,41 @@
 .sidebar-main {
     background: unset;
 }
+.account-nav .content {
+    padding: 0px;
+}
 body.account .sidebar.sidebar-main .block-collapsible-nav .content {
     background: #fff;
     border: 1px solid #0d2c6d;
     padding: 0;
 }
-.block-collapsible-nav .item.current a, .block-collapsible-nav .item.current > strong {
-    border: unset;
+.account-nav .item.current a, .account-nav .item.current strong {
+    border: none;
     padding: 8px 15px;
     background: #0d2c6d;
     color: #fff;
     text-transform: capitalize;
 }
-body.account .sidebar.sidebar-main .block-collapsible-nav .item a {
+.sidebar.sidebar-main .account-nav .item a {
     border: 0;
     color: #0d2c6d;
     padding: 8px 15px;
     text-transform: capitalize;
-    font-weight: 500!important;
+    font-weight: 600;
 }
-body.account .sidebar.sidebar-main .block-collapsible-nav .item a:hover {
+.sidebar.sidebar-main .block-collapsible-nav .item a:hover {
     background-color: #0d2c6d;
     color: #fff;
+    transition: all .5s ease;
+    -webkit-transition: all .5s ease;
+}
+.account-nav-content {
+    border: 1px solid #0d2c6d;
 }
 .main {
     margin-top: 25px;
 }
-body.account h1.page-title, body.account h3 {
+h1.page-title, body.account h3 {
     padding: 11px 15px;
     margin: 0 0 25px;
     background: #0d2c6d;
@@ -39,4 +47,35 @@ body.account h1.page-title, body.account h3 {
     font-weight: 700;
     text-transform: capitalize;
     line-height: 24px;
+}
+.jaybroDashBoardAcc .jaybroDashBoardAccRight a, .jaybroDahboardTopS .jaybroDahboardTopR a {
+    height: 50px;
+    min-width: 225px;
+    border: 0;
+    border-radius: 0;
+    background: #0d2c6d;
+    margin: 0 auto;
+    float: none;
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: #fff;
+    display: block;
+    text-decoration: none;
+    line-height: 50px;
+}
+.jaybroDashBoardAcc, .jaybroDahboardTopS {
+    float: left;
+    width: 100%;
+    padding: 25px 0;
+    margin: 0;
+}
+.jaybroDashBoardAcc .jaybroDashBoardAccRight, .jaybroDahboardTopS .jaybroDahboardTopR {
+    float: right;
+}
+.account-nav .item .delimiter {
+    border: 1px solid #0d2c6d;
+    margin: 0px;
 }

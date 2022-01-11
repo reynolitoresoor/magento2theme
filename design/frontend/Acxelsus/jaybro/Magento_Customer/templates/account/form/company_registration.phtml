@@ -1,0 +1,52 @@
+<?php
+/**
+ * Copyright 2020 aheadWorks. All rights reserved.
+See LICENSE.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+/** @var $block \Aheadworks\Ca\Block\Form */
+?>
+<?php
+	$_objectManager = \Magento\Framework\App\ObjectManager::getInstance(); //instance of\Magento\Framework\App\ObjectManager
+	$storeManager = $_objectManager->get('Magento\Store\Model\StoreManagerInterface'); 
+	$customerSession = $_objectManager->get('Magento\Customer\Model\Session');
+?>
+<?php if(! $customerSession->isLoggedIn()) { ?>
+<style>
+.errorResponseCompanyRegister.success {
+    color: green;
+    margin: 10px 0;
+}
+.errorResponseCompanyRegister.error {
+    color: red;
+    margin: 10px 0;
+}
+</style>
+
+<div class="moon_popUp moon_popUp_company">
+	<div class="popup_content company_popup_content">
+		<div class="popup_content_close company_popup_content_close">x</div>
+		<div class="popup_content_form company_popup_content_form">
+			<div class="errorResponseCompanyRegister"></div>
+			 <form class="form form-company-register company-register-form-popup"
+						  action="<?= $block->escapeUrl($block->getUrl('customerlogin/ajax/register')) ?>"
+						  method="post"
+						  id="company-register-form"
+						  data-mage-init='{"validation":{}}'>
+			<div data-role="aw-ca-form" data-bind="scope: 'awCaForm',afterRender:loadJsAfterKoRender" class="aw-ca__form">
+				<!-- ko template: getTemplate() --><!-- /ko -->
+			</div>
+			</form>
+			<script type="text/x-magento-init">
+				{
+					"[data-role=aw-ca-form]": {
+						"Magento_Ui/js/core/app": <?= /* @noEscape */ $block->getJsLayout() ?>
+					}
+				}
+			</script>
+		</div>
+	</div>
+</div>
+<?php } ?>

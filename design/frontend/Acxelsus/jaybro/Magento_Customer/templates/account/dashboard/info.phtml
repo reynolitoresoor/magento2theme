@@ -1,0 +1,43 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+/** @var \Magento\Customer\Block\Account\Dashboard\Info $block */
+?>
+
+<?php
+	$om = \Magento\Framework\App\ObjectManager::getInstance();
+	$customerSession = $om->create('Magento\Customer\Model\Session');
+	$customerId = $customerSession->getCustomer()->getId();//get id of customer
+	//echo $customerId;
+	$customerData = $om->create('Magento\Customer\Api\CustomerRepositoryInterface')->getById($customerId);
+	
+	
+	$storeManager = $om->get('\Magento\Store\Model\StoreManagerInterface');
+	$logout = $storeManager->getStore()->getBaseUrl()."customer/account/logout";
+?>
+<div class="page-title-wrapper">
+<h1 class="page-title">
+	<span class="base" data-ui-id="page-title-wrapper">My Dashboard</span>    </h1>
+</div>
+<div class="block block-dashboard-info">
+	<div class="jaybroDahboardTop">
+		<div class="jaybroDahboardTopF">Hi <?php echo $block->getName() ?>, you can use the account area to change your account details, and view your current and past orders, open invoices and quote</div>
+		<div class="jaybroDahboardTopS">
+			<div class="jaybroDahboardTopSl">
+			<?php if($customerData->getCustomAttribute('p21contactid')){
+				$p21contactid = $customerData->getCustomAttribute('p21contactid')->getValue();
+	?>
+				<?= __('ACCOUNT NUMBER') ?>: <?php echo $p21contactid; ?>
+			<?php } ?>
+			</div>
+			<div class="jaybroDahboardTopR">
+				<a href="<?php echo $logout; ?>">Logout</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+

@@ -33,9 +33,6 @@ body.account .sidebar.sidebar-main .block-collapsible-nav .content {
 .account-nav-content {
     border: 1px solid #0d2c6d;
 }
-.main {
-    margin-top: 25px;
-}
 h1.page-title, body.account h3 {
     padding: 11px 15px;
     margin: 0 0 25px;

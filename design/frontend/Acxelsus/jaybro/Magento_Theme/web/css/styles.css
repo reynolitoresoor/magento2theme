@@ -5,6 +5,11 @@ body{/*font-size: 14px;*/ font-size: 1.4rem; font-family: 'Roboto', sans-serif!i
     padding: 10px;
     color: #fff;
 }
+*, body {
+    font-size: 1.5rem;
+    font-family: 'Roboto',sans-serif!important;
+    line-height: 2.2rem;
+}
 /* Header section */
 header.page-header {
     background: #0d2c6d;
@@ -1067,7 +1072,7 @@ h3.striveToBeOutstanding-heading {
     color: #1d2226;
     padding-left: 20px;
     padding-right: 20px;
-    height: 100px;
+    height: auto;
 }
 .single-item_container a.pagebuilder-button-primary {
     background-color: unset!important;
@@ -2324,6 +2329,15 @@ ul.jaybroAboutUsSideNavigation li a {
     border-bottom: 5px solid #fff;
     text-decoration: none;
 }
+ul.jaybroAboutUsSideNavigation li a:hover{
+    background-color:#54b9e4;
+    color:#fff;
+    border-bottom:5px solid #fff;
+}
+ul.jaybroAboutUsSideNavigation li a span {
+    font-size: 16px;
+    font-weight: 600;
+}
 .bluefont {
     color: #0d2c6d;
     padding-top: 20px;
@@ -2451,6 +2465,48 @@ body.cms-no-route .sidebar-additional {
     cursor: pointer;
 }
 /* End remote worker management software */
+/* Surpact */
+.btn-default.active.focus, .btn-default.active:focus, .btn-default.active:hover, .btn-default:active.focus, .btn-default:active:focus, .btn-default:active:hover, .open>.dropdown-toggle.btn-default.focus, .open>.dropdown-toggle.btn-default:focus, .open>.dropdown-toggle.btn-default:hover {
+    color: #333;
+    background-color: #d4d4d4;
+    border-color: #8c8c8c;
+}
+.button1:active {
+    background-color: #F9A01E;
+    color: #fff;
+    box-shadow: 0 5px #b3b7bd;
+    transform: translateY(4px);
+}
+.button1:hover {
+    background-color: #1F1a47;
+    color: #fff;
+}
+.button3:active {
+    background-color: #F9A01E;
+    color: #fff;
+    box-shadow: 0 5px #b3b7bd;
+    transform: translateY(4px);
+}
+.button3:hover {
+    background-color: #F9A01E;
+    color: #fff;
+}
+hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 1px solid #eee;
+}
+.buttongrey {
+    background-color: #fff;
+    color: #1BA6DF;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    border: 2px solid #1BA6DF;
+}
+/* End surpact */
 /* Media query for mobile */
 @media only screen and (min-width: 320px) and (max-width: 768px) {
     .header-top {

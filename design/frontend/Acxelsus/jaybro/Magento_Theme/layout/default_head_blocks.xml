@@ -1,19 +1,16 @@
 <?xml version="1.0"?>
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <head>
+    <css src="https://use.fontawesome.com/releases/v5.4.1/css/all.css" type="text/css" src_type="url" />
+    <css src="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" src_type="url"/>
     <css rel="stylesheet" src="Magento_Theme::css/bootstrap.min.css" />
-    <css rel="stylesheet" src="https://use.fontawesome.com/releases/v5.4.1/css/all.css" src_type="url" />
-    <css rel="stylesheet" src="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" src_type="url"/>
     <css rel="stylesheet" src="Magento_Theme::css/styles.css"/>
     <css rel="stylesheet" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" src_type="url"/>
-    
     <script src="Magento_Theme::js/jquery.min.js" />
     <script src="Magento_Theme::js/bootstrap.min.js" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" src_type="url" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/elevatezoom/2.2.3/jquery.elevatezoom.min.js" src_type="url" />
     <script src="Magento_Theme::js/scripts.js" />
     <script src="https://www.google.com/recaptcha/api.js" src_type="url" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.25.1/moment.min.js" src_type="url" />
     <!--<script src="js/jquery.min.js" />-->
     <!--link  src="https://fonts.googleapis.com/css?family=Asap:400,500,600,700" />
     <link src='https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900' rel='stylesheet'  type='text/css' / -->

@@ -164,6 +164,13 @@ header li.authorization-link.prmrCheck img {
     display: block;
     margin: 0 auto;
 }
+.navigation li.level0>a {
+    font-weight: 400;
+}
+.navigation li.level0>a:hover {
+    color: #fff!important;
+}
+
 /* End header section */
 /* Website switcher */
 .websiteswitcher {
@@ -2356,20 +2363,23 @@ ul.navigation-aboutus li a {
 }
 /* End about us submenu */
 /* Our range submenu */
-.navigation ul li.our-range .submenu {
+.navigation li.our-range {
+    cursor: pointer;
+}
+.navigation li.our-range .submenu {
     width: 400px;
     height: 75%;
     min-height: 592px;
 }
-.navigation ul li.our-range:hover .submenu {
+.navigation li.our-range:hover .submenu {
     display: block;
 }
-.navigation ul li.our-range:hover .submenu li.categories a {
+.navigation li.our-range:hover .submenu li.categories a {
     padding: 20px 0px;
     background-color: unset;
     border-bottom: 2px solid #0e346d;
 }
-.navigation ul li.our-range .submenu li.categories a {
+.navigation li.our-range .submenu li.categories a {
     color: #1ba6df;
     font-size: 2rem;
     line-height: 2.8rem;

@@ -16,9 +16,15 @@ if ($block->isLoggedIn()) {
     $custom_class = 'data-toggle="modal" data-target="#login-modal"';
 }
 ?>
-<li class="authorization-link" data-label="<?= $block->escapeHtml(__('or')) ?> login-popup">
+<li class="authorization-link login" data-label="<?= $block->escapeHtml(__('or')) ?> login-popup">
     <span class="fa fa-user" id="user-icon"></span>
     <a <?php /* @noEscape */ /*$block->getLinkAttributes()*/ ?><?= /* @noEscape */ $dataPostParam ?> <?= /* @noEscape */ $custom_class ?>>
         <?= $block->escapeHtml($block->getLabel()) ?>
+    </a>
+</li>
+<li class="authorization-link quickorder">
+    <a <?= /* @noEscape */ $custom_class ?>>
+		<img src="https://www.jaybro.com.au/pub/media/quicjOrder.png" alt="quickOrder">
+        <p>Quick Order</p>
     </a>
 </li>

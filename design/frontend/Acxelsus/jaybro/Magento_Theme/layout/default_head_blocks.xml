@@ -6,6 +6,7 @@
     <css rel="stylesheet" src="Magento_Theme::css/bootstrap.min.css" />
     <css rel="stylesheet" src="Magento_Theme::css/styles.css"/>
     <css rel="stylesheet" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" src_type="url"/>
+    
     <script src="Magento_Theme::js/jquery.min.js" />
     <script src="Magento_Theme::js/bootstrap.min.js" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" src_type="url" />

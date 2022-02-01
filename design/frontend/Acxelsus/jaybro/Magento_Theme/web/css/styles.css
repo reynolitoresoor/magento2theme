@@ -1,4 +1,9 @@
 /* Acxelsus Jaybro Styles */
+@font-face{font-family:'Open Sans';src:url('https://www.jaybro.com.au/pub/static/frontend/Jaybro/luma_child/en_AU/fonts/opensans/light/opensans-300.woff2') format('woff2'),url('https://www.jaybro.com.au/pub/static/frontend/Jaybro/luma_child/en_AU/fonts/opensans/light/opensans-300.woff') format('woff');font-weight:300;font-style:normal;font-display:swap}
+@font-face{font-family:'Open Sans';src:url('https://www.jaybro.com.au/pub/static/frontend/Jaybro/luma_child/en_AU/fonts/opensans/regular/opensans-400.woff2') format('woff2'),url('https://www.jaybro.com.au/pub/static/frontend/Jaybro/luma_child/en_AU/fonts/opensans/regular/opensans-400.woff') format('woff');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Open Sans';src:url('https://www.jaybro.com.au/pub/static/frontend/Jaybro/luma_child/en_AU/fonts/opensans/semibold/opensans-600.woff2') format('woff2'),url('https://www.jaybro.com.au/pub/static/frontend/Jaybro/luma_child/en_AU/fonts/opensans/semibold/opensans-600.woff') format('woff');font-weight:600;font-style:normal;font-display:swap}
+@font-face{font-family:'Open Sans';src:url('https://www.jaybro.com.au/pub/static/frontend/Jaybro/luma_child/en_AU/fonts/opensans/bold/opensans-700.woff2') format('woff2'),url('https://www.jaybro.com.au/pub/static/frontend/Jaybro/luma_child/en_AU/fonts/opensans/bold/opensans-700.woff') format('woff');font-weight:700;font-style:normal;font-display:swap}
+
 body{/*font-size: 14px;*/ font-size: 1.4rem; font-family: 'Roboto', sans-serif!important;overflow-x: hidden;}
 .social-icons-container span {
     font-size: 40px;
@@ -10,6 +15,23 @@ body{/*font-size: 14px;*/ font-size: 1.4rem; font-family: 'Roboto', sans-serif!i
     line-height: 2.2rem;
 }
 /* Header section */
+a.logo {
+    max-width: 215px;
+    float: left;
+    margin: -14px 0 0;
+    top: -40px
+}
+a.logo img {
+    width: 275px;
+    height: 43px;
+}
+header.page-header {
+    min-height: 146px;
+    z-index: 900!important;
+    position: fixed!important;
+    width: 100%;
+    top: 0;
+}
 header.page-header {
     background: #0d2c6d;
     border-bottom: none;
@@ -21,6 +43,9 @@ header.page-header {
 .navigation .level0 > .level-top {
     color: #fff;
 }
+.navigation {
+    background: unset;
+}
 form.minisearch {
     position: absolute; 
     left: -650px;
@@ -29,12 +54,24 @@ form.minisearch {
 form.minisearch .nested {
     display: none;
 }
-.authorization-link {
+.login {
     position: absolute;
-    right: 90px;
+    right: 180px;
     top: 40px;
     list-style-type:none;
     cursor: pointer;
+}
+.quickorder {
+    position: absolute;
+    right: 85px;
+    top: 12px;
+    text-align: center;
+    list-style-type: none;
+    cursor: pointer;
+}
+.quickorder img {
+    max-height: 25px;
+    margin-bottom: 3px;
 }
 .authorization-link a, .minicart-wrapper .action.showcart:before {
     color: #fff;
@@ -121,6 +158,11 @@ span.btn-search {
 .fa-chevron-left, .fa-chevron-right {
     position: absolute;
     top: 50%;
+}
+header li.authorization-link.prmrCheck img {
+    max-height: 25px;
+    display: block;
+    margin: 0 auto;
 }
 /* End header section */
 /* Website switcher */
@@ -357,6 +399,10 @@ button.close:hover {
 .page-footer, .footer-bottom-container, .nav-sections-items, nav.navigation {
     background-color: #0d2c6d;
 }
+.page-footer {
+    position: relative;
+    margin-top: 200px;
+}
 .footer.content {
     border-top: unset;
     color: #fff;
@@ -429,9 +475,20 @@ a.about-jaybro, a.customer-support, a.my-account, a.contact-info {
 h3.about-jaybro span, h3.customer-support span, h3.my-account span, h3.contact-info span {
     display: none;
 }
+.guayanteedSec p {
+    font-size: 16px;
+    color: #fff;
+    font-weight: 600;
+    line-height: 24px;
+    font-style: italic;
+}
 /* End footer section */
 
 /* Home page content */
+main {
+    position: relative;
+    top: 210px;
+}
 div.image-icon {
     display: inline-block;
 }
@@ -481,6 +538,36 @@ a.category-link {
     transform: skewX(-25deg);
     -webkit-transform: skewX(-25deg);
 }
+h2.w_heading.jomeBlogHeading, h1.w_heading.jomeBlogHeading {
+    padding: 12px 0 12px 7px;
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+    position: relative;
+    width: 100%;
+    background: #0d2c6d;
+}
+h2.w_heading.jomeBlogHeading:before, h1.w_heading.jomeBlogHeading:before, .why-choose-jaybro:before {
+    position: absolute;
+    content: '';
+    background: #0d2c6d;
+    width: 200%;
+    height: 100%;
+    top: 0;
+    left: -200%;
+}
+h2.w_heading.jomeBlogHeading:after, h1.w_heading.jomeBlogHeading:after {
+    position: absolute;
+    content: '';
+    background: #0d2c6d;
+    width: 50px;
+    height: 100%;
+    top: 0;
+    right: -11px;
+    transform: skewX(-25deg);
+    -webkit-transform: skewX(-25deg);
+}
 .btn-blog {
     background: #fedd32!important;
     border: 0;
@@ -509,7 +596,6 @@ h2.why-choose-jaybro {
     line-height: 34px;
     background: #0d2c6d;
     position: relative;
-    max-width: 50%;
 }
 h2.why-choose-jaybro:after {
     position: absolute;
@@ -570,6 +656,9 @@ p.homePromoText {
 }
 .promo-image-container {
     margin-bottom: 50px;
+}
+.whyChooseJaybroText p {
+    color: #0d2c6d;
 }
 /* End home page content */
 
@@ -2217,6 +2306,8 @@ ul.BambooHR-ATS-Jobs-List li {
 /* About us submenu */
 .about-us-container {
     background-color: #ffd100;
+    position: relative; 
+    top: 210px;
 }
 .aboutus-navigation ul {
     list-style: none;
@@ -2234,7 +2325,6 @@ ul.BambooHR-ATS-Jobs-List li {
     margin-bottom: 0px;
 }
 ul.navigation-aboutus li a {
-    font-family: Roboto !important;
     font-size: 14px;
     font-weight: bold;
     font-stretch: normal;

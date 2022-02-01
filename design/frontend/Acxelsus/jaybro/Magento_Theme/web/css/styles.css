@@ -51,9 +51,10 @@ header.page-header {
     background: unset;
 }
 form.minisearch {
-    position: absolute; 
-    left: -650px;
+    position: absolute;
+    left: -320px;
     width: 450px;
+    top: -10px;
 }
 form.minisearch .nested {
     display: none;
@@ -174,7 +175,20 @@ header li.authorization-link.prmrCheck img {
 .navigation li.level0>a:hover {
     color: #fff!important;
 }
-
+.block-search {
+    float: right;
+    padding-left: 15px;
+    position: relative;
+    width: 625px;
+    z-index: 4;
+}
+header.page-header .block-search input, span.btn-search {
+    height: 35px;
+}
+header.page-header .block-search input::placeholder {
+    color: #333;
+    font-size: 14px;
+}
 /* End header section */
 /* Website switcher */
 .websiteswitcher {

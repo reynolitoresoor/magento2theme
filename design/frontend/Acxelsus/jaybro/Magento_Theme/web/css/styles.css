@@ -509,6 +509,10 @@ h3.about-jaybro span, h3.customer-support span, h3.my-account span, h3.contact-i
     line-height: 24px;
     font-style: italic;
 }
+.copyright-container p {
+    font-size: 12px;
+    font-weight: 400;
+}
 /* End footer section */
 
 /* Home page content */

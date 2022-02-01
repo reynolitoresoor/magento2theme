@@ -40,10 +40,14 @@ header.page-header {
     color: #fff;
     margin: 0px;
 }
+header.page-header {
+    max-height: 160px!important;
+}
 .navigation .level0 > .level-top {
     color: #fff;
 }
 .navigation {
+    top: -45px!important;
     background: unset;
 }
 form.minisearch {
@@ -180,7 +184,9 @@ header li.authorization-link.prmrCheck img {
     color: #ffde00;
     text-transform: capitalize;
     z-index: 91;
-    top: 170px;
+}
+.websiteswitcher label {
+    font-weight: 400;
 }
 .page-header .switcher {
     float: right;
@@ -494,7 +500,7 @@ h3.about-jaybro span, h3.customer-support span, h3.my-account span, h3.contact-i
 /* Home page content */
 main {
     position: relative;
-    top: 210px;
+    top: 160px;
 }
 div.image-icon {
     display: inline-block;
@@ -2314,7 +2320,7 @@ ul.BambooHR-ATS-Jobs-List li {
 .about-us-container {
     background-color: #ffd100;
     position: relative; 
-    top: 210px;
+    top: 160px;
 }
 .aboutus-navigation ul {
     list-style: none;
